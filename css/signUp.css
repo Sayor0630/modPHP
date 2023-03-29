@@ -1,0 +1,96 @@
+body {
+    background-color: #f5f5f5;
+  }
+  
+  .container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 1rem;
+  }
+  
+  .card-signup {
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+  
+  .card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  .form-group label {
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-control {
+    background-color: #ebebeb;
+    color: #333;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .password-field .input-group-text {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .password-field .input-group-text:hover,
+  .password-field .input-group-text:focus {
+    background-color: transparent;
+    border: none;
+  }
+  
+  .password-field #toggle-password,
+  .password-field #toggle-confirm-password {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.5rem;
+  }
+  
+  .password-field input[type="password"] {
+    padding-right: 3rem;
+  }
+  
+  .btn-primary {
+    background-color: #0078d7;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    transition: all 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #005ea2;
+  }
+  
+  .text-center {
+    color: #333;
+    margin-top: 1.5rem;
+  }
+  
+  .text-center a {
+    color: #0078d7;
+    text-decoration: none;
+  }
+  
+  .text-center a:hover {
+    text-decoration: underline;
+  }
+  

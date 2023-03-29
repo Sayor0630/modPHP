@@ -1,0 +1,82 @@
+*, body, h1, h2, h3, h4, h5, h6, p, span, a {
+  box-sizing: border-box;
+  margin: 0;
+  /*padding: 5px 15px;*/
+  font-family: Montserrat, sans-serif;
+}
+
+::selection{
+  background-color: tomato;
+  font-weight: 700;
+  color: #333;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+      -webkit-backdrop-filter: blur(20px) saturate(150%);
+    backdrop-filter: blur(20px) saturate(150%);
+    background-color: hsl(0,0%,19%,0.8);
+    inset-block-start: 0;
+    position: sticky;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    z-index: 10
+}
+
+.logo > img {
+  height: 80px;
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation li {
+  margin-right: 20px;
+}
+
+.navigation a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navigation a.active, .navigation a.active:hover {
+  background-color: #0099cc;
+    color: #333;
+  border-radius: 5px;
+}
+
+.navigation a:hover {
+  background-color: #e7e7e7;
+  color: #333;
+  border-radius: 5px;
+}
+
+.signin a {
+  color: #f9f9f9;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid #f9f9f9;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.signin a:hover {
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+
+nav > .signin {
+  margin-right: 50px;
+}

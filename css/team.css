@@ -1,0 +1,117 @@
+*{
+    font-family: 'Montserrat';
+}
+.team {
+    padding: 100px 0;
+    background-color: #1e1e1e;
+  }
+  
+  .team h2 {
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  
+  .team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+  
+  .team-member {
+    width: 450px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-out;
+  }
+  
+  .team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .team-member-image {
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .team-member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-out;
+  }
+  
+  .team-member:hover .team-member-image img {
+    transform: scale(1.1);
+  }
+  
+  .team-member-info {
+    padding: 30px;
+  }
+  
+  .team-member-info h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .position {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .social-media {
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-media a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #777;
+    transition: all 0.3s ease;
+  }
+  
+  .social-media a:hover {
+    color: #0078D7;
+  }
+  
+  .social-media a i {
+    font-size: 1.2rem;
+    margin-right: 5px;
+  }
+  
+  .social-media a p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 0.5px;
+  }
+  
+
+  .box {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.16);
+    padding: 20px;
+    width: 450px;
+    max-width: 100%;
+  }
+  
+  .box strong {
+    color: #000000;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  
