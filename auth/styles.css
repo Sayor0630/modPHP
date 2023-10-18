@@ -146,7 +146,7 @@ button {
 }
 
 .countryCode {
-  max-width: -moz-fit-content;
+  max-width: max-content;
 }
 
 .control.countryCode option {
