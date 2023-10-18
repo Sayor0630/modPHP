@@ -118,7 +118,7 @@
                     <label class="title">Password Length</label>
                     <span></span>
                 </div>
-                <input type="range" min="1" max="30" value="15" step="1" class="seekbar">
+                <input type="range" min="1" max="30" value="1" step="1" class="seekbar">
                 </div>
                 <script>
                   const sliderEl = document.querySelector(".seekbar")
@@ -130,7 +130,7 @@
 
                     const progress = (tempSliderValue / sliderEl.max) * 100;
                   
-                    sliderEl.style.background = `linear-gradient(to right, #f50 ${progress}%, rgba(255, 255, 255, 0.1) ${progress}%)`;
+                    sliderEl.style.background = `linear-gradient(to right, #b177ff ${progress}%, rgba(255, 255, 255, 0.1) ${progress}%)`;
                   })
                 </script>
 

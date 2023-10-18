@@ -455,15 +455,15 @@ background: rgba(255, 255, 255, 0.1);
 }
 .pass-indicator#weak::before{
   width: 20%;
-  background: #E64A4A;
+  background: #bc2b38;
 }
 .pass-indicator#medium::before{
   width: 50%;
-  background: #f1c80b;
+  background: #d36f30;
 }
 .pass-indicator#strong::before{
   width: 100%;
-  background: #4285F4;
+  background: #1eb965;
 }
 .wrapper .pass-length{
   margin: 1.56rem 0 1.25rem;
@@ -821,7 +821,7 @@ input[type="range"]::-webkit-slider-thumb {
   /* creating a custom design */
   height: 15px;
   width: 15px;
-  background-color: #f50;
+  background-color: #b177ff;
   border-radius: 50%;
   border: none;
 
@@ -833,7 +833,7 @@ input[type="range"]::-webkit-slider-thumb {
 input[type="range"]::-moz-range-thumb {
   height: 15px;
   width: 15px;
-  background-color: #f50;
+  background-color: #b177ff;
   border-radius: 50%;
   border: none;
   
