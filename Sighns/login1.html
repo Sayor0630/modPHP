@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Signup 2</title>
   <link rel="stylesheet" href=".././css/nav.css">
   <link rel="stylesheet" href="styles.css" />
@@ -30,7 +32,7 @@
         <div id="spinner" class="spinner"></div>
       </div>
       <div class="phone-input">
-        <select id="countryCode" class="control countryCode">
+        <select aria-label="countryCode" id="countryCode" class="control countryCode">
           <option value="+880">+880 (BD)</option>
           <option value="+1">+1 (US)</option>
           <option value="+44">+44 (UK)</option>
@@ -44,8 +46,10 @@
       <div id="bars">
         <div></div>
       </div>
-      <button class="btn" id="signup-btn" type="button"><a href="#">Login</a></button>
-      <h5>Do not have an account? <a href=".././Sighns/signup1.html">Sign Up now</a> </h5>
+      <button class="btn" id="signup-btn" type="submit" disabled>
+        <p>Login</p>
+      </button>
+      <h5>Do not have an account? <a href=".././Sighns/signup1.php">Sign Up now</a> </h5>
     </form>
   </div>
 
