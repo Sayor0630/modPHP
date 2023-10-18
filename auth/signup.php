@@ -39,7 +39,49 @@
           <div class="check fas fa-check"></div>
         </div>
       </div> -->
-      <input type="range" min="0" max="100" value="40" class="range range-xs" disabled/> 
+      <div class="progress-bar">
+            <div class="step">
+               <p>
+                  Name
+               </p>
+               <div class="bullet">
+                  <span>1</span>
+               </div>
+               <div class="check fas fa-check"></div>
+            </div>
+            <div class="step">
+               <p>
+                  Contact
+               </p>
+               <div class="bullet">
+                  <span>2</span>
+               </div>
+               <div class="check fas fa-check"></div>
+            </div>
+            <div class="step">
+               <p>
+                  Birth
+               </p>
+               <div class="bullet">
+                  <span>3</span>
+               </div>
+               <div class="check fas fa-check"></div>
+            </div>
+            <div class="step">
+               <p>
+                  Submit
+               </p>
+               <div class="bullet">
+                  <span>4</span>
+               </div>
+               <div class="check fas fa-check"></div>
+            </div>
+         </div>
+
+
+
+
+
 
       <form class="login-form" action="process_signup.php" method="post">
       <img src="https://i.pinimg.com/originals/0a/5f/ea/0a5feae400fc816c4ca2aca8bd67a168.jpg" />
@@ -231,7 +273,7 @@
   <!-- ==================================================================================== -->
 
   <script type="text/javascript" src="./main.js"></script>
-  <!-- <script type="text/javascript" src=".././js/vanilla-tilt.js"></script> -->
+  <script type="text/javascript" src=".././js/vanilla-tilt.js"></script>
   <script>
     var coll = document.getElementsByClassName("collapsible");
     var i;

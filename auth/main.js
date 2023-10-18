@@ -242,12 +242,4 @@ image.addEventListener('click', function() {
 
 
 // NEXT PAGE HANDLER
-const nextPage = document.querySelector('#next-page');
 
-function myFunction() {
-  if (nextPage.style.display === "none") {
-    nextPage.style.display = "block";
-  } else {
-    nextPage.style.display = "none";
-  }
-}
