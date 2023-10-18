@@ -46,10 +46,10 @@
       <div id="bars">
         <div></div>
       </div>
-      <button class="btn" id="signup-btn" type="submit" disabled>
+      <button class="btn" id="signup-btn" type="submit">
         <p>Login</p>
       </button>
-      <h5>Do not have an account? <a href=".././Sighns/signup1.php">Sign Up now</a> </h5>
+      <h5>Do not have an account? <a href="./signup.html">Sign Up now</a> </h5>
     </form>
   </div>
 

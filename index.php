@@ -26,7 +26,7 @@
           <li><a href="./contact.html">Contact</a></li>
         </ul>
         <div class="signin">
-          <a href="./singin.html">Sign In</a>
+          <a href="./auth/login.php">SIGN IN</a>
         </div>
       </nav>
       

@@ -206,10 +206,10 @@
 </div>
 <div class="strength" id="strength"></div>
 <div id='pass-length-message' class="alert-message "></div>
-<button class="btn" id="signup-btn" type="submit" disabled>
+<button class="btn" id="signup-btn" type="submit">
   <p>JOIN NOW</p>
 </button>
-        <h5>Already have an account? <a href=".././Sighns/login1.html">Login now</a> </h5>
+        <h5>Already have an account? <a href="./login.html">Login now</a> </h5>
       </form>
     </div>
   </div>
