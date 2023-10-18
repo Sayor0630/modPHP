@@ -1,3 +1,6 @@
+
+
+
 * {
   box-sizing: border-box;
 }
@@ -21,7 +24,7 @@ body {
   background: #333c47;
   background-repeat: no-repeat;
   background-size: 300vh;
-  color: #868b94;
+  color: var(--font-color);
   /* animation: rotate 5s infinite alternate linear; */
 }
 
@@ -89,7 +92,7 @@ button {
 }
 
 .login-card h5 a:hover {
-	color:#b177ff;
+	color:#15b77b;
 	transition: 0.2s all;
 }
 
@@ -241,10 +244,6 @@ button {
   padding: 0 16px;
   margin: 8px 0;
   font-size: 16px;
-  
-
-
-  
 	position: relative;
 	top: 0;
 	left: 0;
@@ -303,7 +302,7 @@ button {
 	bottom: -5px;
 	width: 30px;
 	height: 10px;
-	background: #6c4bc48f;
+	background: #15b77b;
 	border-radius: 10px;
 	transition: 0.5s;
 	transition-delay: 0.5;
@@ -323,7 +322,7 @@ button {
 	top: -5px;
 	width: 30px;
 	height: 10px;
-	background: #6c4bc48c;
+	background: #15b77b;
 	border-radius: 10px;
 	transition: 0.5s;
 	transition-delay: 0.5;

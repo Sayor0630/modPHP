@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Comfortaa:wght@300;400;500;600;700&display=swap');
+/* dark theme */
+:root{
+    --primary: #b4fcae;
+    --secondary: #a98fe0;
+    --accent: #ffaaa0;
+    --neutral: #29333d;
+    --base-100: #333c47;
+    --info: #31b1d8;
+    --success: #15b77b;
+    --warning: #f4d02f;
+    --error: #e11d48;
+
+
+    /* font */
+    --font-color: hsl(215, 6%, 83%);
+    --font-eng: 'Comfortaa', sans-serif;
+    --font-bang: 'Baloo Da 2', sans-serif;
+}
+
+/* light theme */
+:root{
+    --primary: #4f3ca3;
+    --secondary: #9b4fd1;
+    --accent: #d138b7;
+    --neutral: #1f1727;
+    --base-100: #ebeff4;
+    --info: #7ab8dc;
+    --success: #24c278;
+    --warning: #f3952b;
+    --error: #e11d48;
+
+
+    /* font */
+    --font-color: hsl(213, 1%, 18%);
+    --font-eng: 'Comfortaa', sans-serif;
+    --font-bang: 'Baloo Da 2', sans-serif;
+}
