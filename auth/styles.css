@@ -228,13 +228,11 @@ button {
 }
 
 .strength {
+	color: #837f90;
   text-align: left;
   height: 30px;
   text-transform: capitalize;
 }
-
-
-
 
 .btn {
   border: 0;
