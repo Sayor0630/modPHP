@@ -117,9 +117,10 @@
                   <div class="details">
                     <label class="title">Password Length</label>
                     <span></span>
-                  </div>
+                </div>
                   <input type="range" min="1" max="30" value="15" step="1" class="seekbar">
                 </div>
+
                 <div class="pass-settings">
                   <label class="title">Password Settings</label>
                   <ul class="options">
