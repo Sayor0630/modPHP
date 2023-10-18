@@ -27,18 +27,6 @@
       <h2>Sign Up</h2>
       <h3>Enter your credentials</h3>
 
-      <!-- <div class="progress-bar">
-        <div class="step">
-          <p>Student</p>
-          <div class="bullet"><span>1</span></div>
-          <div class="check fas fa-check"></div>
-        </div>
-        <div class="step">
-          <p>Guardian</p>
-          <div class="bullet"><span>2</span></div>
-          <div class="check fas fa-check"></div>
-        </div>
-      </div> -->
       <div class="progress-bar">
             <div class="step">
                <p>
