@@ -8,11 +8,11 @@ body,
   height: 100%;
 }
 
-@keyframes rotate {
+/* @keyframes rotate {
   100% {
     background-position: 0% 50%;
   }
-}
+} */
 
 body {
   display: grid;
@@ -22,7 +22,7 @@ body {
   background-repeat: no-repeat;
   background-size: 300vh;
   color: #868b94;
-  animation: rotate 5s infinite alternate linear;
+  /* animation: rotate 5s infinite alternate linear; */
 }
 
 button {
