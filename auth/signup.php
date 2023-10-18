@@ -118,8 +118,21 @@
                     <label class="title">Password Length</label>
                     <span></span>
                 </div>
-                  <input type="range" min="1" max="30" value="15" step="1" class="seekbar">
+                <input type="range" min="1" max="30" value="15" step="1" class="seekbar">
                 </div>
+                <script>
+                  const sliderEl = document.querySelector(".seekbar")
+
+                  sliderEl.addEventListener("input", (event) => {
+                    const tempSliderValue = event.target.value; 
+
+                    lengthSlider.value = tempSliderValue;
+
+                    const progress = (tempSliderValue / sliderEl.max) * 100;
+                  
+                    sliderEl.style.background = `linear-gradient(to right, #f50 ${progress}%, rgba(255, 255, 255, 0.1) ${progress}%)`;
+                  })
+                </script>
 
                 <div class="pass-settings">
                   <label class="title">Password Settings</label>
@@ -236,19 +249,6 @@
               copyIcon.addEventListener("click", copyPassword);
               lengthSlider.addEventListener("input", updateSlider);
               generateBtn.addEventListener("click", generatePassword);
-
-
-              const sliderEl = document.querySelector(".seekbar");
-
-sliderEl.addEventListener("input", (event) => {
-  const tempSliderValue = event.target.value;
-
-  lengthSlider.value = tempSliderValue;
-
-  const progress = (tempSliderValue / sliderEl.max) * 100;
-
-  sliderEl.style.background = `linear-gradient(to right, #f50 ${progress}%, #ccc ${progress}%) !important`; // Add !important to override any existing styles
-});
 
             </script>
           </div>
