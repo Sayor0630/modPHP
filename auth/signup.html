@@ -11,6 +11,9 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+  <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.3/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script> -->
+
 
 </head>
 
@@ -18,12 +21,29 @@
 
 
 
-  <div class="hero">
+  <div class="hero-T">
     <div class="login-card">
-      <img src="https://i.pinimg.com/originals/0a/5f/ea/0a5feae400fc816c4ca2aca8bd67a168.jpg" />
+      
       <h2>Sign Up</h2>
       <h3>Enter your credentials</h3>
+
+      <!-- <div class="progress-bar">
+        <div class="step">
+          <p>Student</p>
+          <div class="bullet"><span>1</span></div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p>Guardian</p>
+          <div class="bullet"><span>2</span></div>
+          <div class="check fas fa-check"></div>
+        </div>
+      </div> -->
+      <input type="range" min="0" max="100" value="40" class="range range-xs" disabled/> 
+
       <form class="login-form" action="process_signup.php" method="post">
+      <img src="https://i.pinimg.com/originals/0a/5f/ea/0a5feae400fc816c4ca2aca8bd67a168.jpg" />
+        <div class="page">
         <div class="username">
           <input autocomplete="off" spellcheck="false" class="control" type="text" id="name" name="name"
             placeholder="Username" />
@@ -190,23 +210,94 @@
         <input spellcheck="false" class="control" id="password" name="password" type="password" placeholder="Password"/>
 <input spellcheck="false" class="control" id="confirm-password" type="password" placeholder="Confirm Password" name="confirm_password"/>
 <div id='pass-match-message' class="alert-message "></div>
+
+
 <div id="bars">
   <div></div>
 </div>
 <div class="strength" id="strength"></div>
 <div id='pass-length-message' class="alert-message "></div>
-<button class="btn" id="signup-btn" type="submit">
-  <p>JOIN NOW</p>
+
+
+
+<button class="btn" id="nextRegiButton" id="signup-btn" type="submit">
+  <p>Next</p>
 </button>
-        <h5>Already have an account? <a href="./login.php">Login now</a> </h5>
-      </form>
+
+
+
+        </div>
+
+        <!-- ==================================================================================== -->
+        <!-- ==================================================================================== -->
+        <!-- ==================================================================================== -->
+
+
+
+
+        <div class="pageTwo">
+        <div class="username">
+          <input autocomplete="off" spellcheck="false" class="control" type="text" id="fname" name="fname"
+            placeholder="Father's Name" />
+          <div id="spinner" class="spinner"></div>
+          <div id='name-message' class="alert-message"></div>
+        </div>
+
+
+        <div class="mobile-number">
+        <div class="phone-input">
+          <select name="countryCode" id="countryCode" class="control countryCode" disabled>
+            <option value="+880">+880 (BD)</option>
+          </select>
+          <input autocomplete="off" spellcheck="false" class="control mobileNumber" type="tel" id="mobile_number"
+            name="mobile_number" placeholder="Father's Mobile Number" />
+        </div>
+        <div id='mobile-number-message' class="alert-message"></div>
+        </div>
+
+
+
+<br>
+
+
+        <div class="username">
+          <input autocomplete="off" spellcheck="false" class="control" type="text" id="mname" name="mname"
+            placeholder="Mother's Name" />
+          <div id="spinner" class="spinner"></div>
+          <div id='name-message' class="alert-message"></div>
+        </div>
+      
+        
+
+        <div class="mobile-number">
+        <div class="phone-input">
+          <select name="countryCode" id="countryCode" class="control countryCode" disabled>
+            <option value="+880">+880 (BD)</option>
+          </select>
+          <input autocomplete="off" spellcheck="false" class="control mobileNumber" type="tel" id="mobile_number"
+            name="mobile_number" placeholder="Mother's Mobile Number" />
+        </div>
+        <div id='mobile-number-message' class="alert-message"></div>
+        </div>
+
+
+        <button class="btn" id="signup-btn" type="submit">
+          <p>JOIN NOW</p>
+        </button>
+       </div>
+        <!-- ==================================================================================== -->
+        <!-- ==================================================================================== -->
+        <!-- ==================================================================================== -->
+       <h5>Already have an account? <a href="./login.php">Login now</a> </h5>
+       </form>
     </div>
   </div>
+
 
   <!-- ==================================================================================== -->
 
   <script type="text/javascript" src="./main.js"></script>
-  <script type="text/javascript" src=".././js/vanilla-tilt.js"></script>
+  <!-- <script type="text/javascript" src=".././js/vanilla-tilt.js"></script> -->
   <script>
     var coll = document.getElementsByClassName("collapsible");
     var i;

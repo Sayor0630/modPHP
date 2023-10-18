@@ -93,10 +93,11 @@ button {
 
 .login-card img {
   width: 120px;
+  height: 120px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.4);
   padding: 5px;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
 }
 
 .login-card > h3 {
@@ -470,27 +471,6 @@ background: rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: space-between;
 }
-.pass-length input{
-  width: 100%;
-	border-bottom: none !important;
-	-webkit-appearance: none;
-  height: 4px;
-  background-color: #eaeaea;
-}
-
-.pass-length input::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance:none;  
-	height:22px;
-	width:22px;
-	border-radius:50%;
-	background:#000;
-	cursor:pointer
-}
-
-
-
-
 
 
 .title {
@@ -657,3 +637,45 @@ background: rgba(255, 255, 255, 0.1);
 	text-align: left;
 	font-size: 12px;
 }
+
+
+.progress-bar{
+  display: flex!important;
+  margin: 40px 0!important;
+}
+
+.progress-bar .step{
+  text-align: center!important;
+  width: 100%!important;
+}
+
+.progress-bar .step p{
+  font-size: 18px!important;
+  font-weight: 800!important;
+  color: #000!important;
+  margin-bottom: 8px!important;
+}
+
+
+.progress-bar .step .bullet{
+  position: relative!important;
+  height: 25px!important;
+  width: 25px!important;
+  border: 2px solid #000!important;
+  border-radius: 50%!important;
+}
+
+.progress-bar .step span{
+  font-weight: 500!important;
+  font-size: 17px!important;
+  line-height: 25px!important;
+  position: absolute!important;
+  left: 50%!important;
+  transform: translateX(-50%)!important;
+}
+
+.progress-bar .step .check{
+  display: none!important;
+}
+
+.pageTwo{display: none;}

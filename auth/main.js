@@ -204,3 +204,44 @@ document.addEventListener("DOMContentLoaded", function () {
     checkPasswordLength();
   });
 });
+
+
+
+// img handling
+const image = document.querySelector('img');
+
+image.addEventListener('click', function() {
+  // Create a new file input element.
+  const fileInput = document.createElement('input');
+  fileInput.type = 'file';
+  fileInput.accept = 'image/*';
+
+  // Listen for the user to select an image file.
+  fileInput.addEventListener('change', function() {
+    // Get the selected image file.
+    const file = fileInput.files[0];
+
+    // Create a new FileReader object.
+    const reader = new FileReader();
+
+    // Read the selected image file.
+    reader.onload = function() {
+      // Set the src attribute of the image element to the data URL of the selected image file.
+      image.src = reader.result;
+    };
+
+    reader.readAsDataURL(file);
+  });
+
+  // Click the file input element to open the file selection dialog.
+  fileInput.click();
+});
+
+
+
+
+
+// NEXT PAGE HANDLER
+const nextRegiButton = document.querySelector('#next-regi-btn');
+
+
