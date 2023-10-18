@@ -218,76 +218,10 @@
 <div class="strength" id="strength"></div>
 <div id='pass-length-message' class="alert-message "></div>
 
-
-
-<button class="btn" id="nextRegiButton" id="signup-btn" type="submit">
-  <p>Next</p>
-</button>
-
-
-
-        </div>
-
-        <!-- ==================================================================================== -->
-        <!-- ==================================================================================== -->
-        <!-- ==================================================================================== -->
-
-
-
-
-        <div class="pageTwo">
-        <div class="username">
-          <input autocomplete="off" spellcheck="false" class="control" type="text" id="fname" name="fname"
-            placeholder="Father's Name" />
-          <div id="spinner" class="spinner"></div>
-          <div id='name-message' class="alert-message"></div>
-        </div>
-
-
-        <div class="mobile-number">
-        <div class="phone-input">
-          <select name="countryCode" id="countryCode" class="control countryCode" disabled>
-            <option value="+880">+880 (BD)</option>
-          </select>
-          <input autocomplete="off" spellcheck="false" class="control mobileNumber" type="tel" id="mobile_number"
-            name="mobile_number" placeholder="Father's Mobile Number" />
-        </div>
-        <div id='mobile-number-message' class="alert-message"></div>
-        </div>
-
-
-
-<br>
-
-
-        <div class="username">
-          <input autocomplete="off" spellcheck="false" class="control" type="text" id="mname" name="mname"
-            placeholder="Mother's Name" />
-          <div id="spinner" class="spinner"></div>
-          <div id='name-message' class="alert-message"></div>
-        </div>
-      
-        
-
-        <div class="mobile-number">
-        <div class="phone-input">
-          <select name="countryCode" id="countryCode" class="control countryCode" disabled>
-            <option value="+880">+880 (BD)</option>
-          </select>
-          <input autocomplete="off" spellcheck="false" class="control mobileNumber" type="tel" id="mobile_number"
-            name="mobile_number" placeholder="Mother's Mobile Number" />
-        </div>
-        <div id='mobile-number-message' class="alert-message"></div>
-        </div>
-
-
         <button class="btn" id="signup-btn" type="submit">
           <p>JOIN NOW</p>
         </button>
-       </div>
-        <!-- ==================================================================================== -->
-        <!-- ==================================================================================== -->
-        <!-- ==================================================================================== -->
+      
        <h5>Already have an account? <a href="./login.php">Login now</a> </h5>
        </form>
     </div>
