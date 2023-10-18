@@ -83,6 +83,7 @@ button {
 }
 
 .login-form h5 {
+	color: #837f90;
 	margin-top: 20px;
 }
 
@@ -376,12 +377,12 @@ input:focus, input:focus:hover {
 /*Password Generator*/
 
 .container{
-  width: 500px;	
+  width: 500px;
   max-height: -moz-fit-content;
   border-radius: 4px;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
-	  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   border-right: 1px solid rgba(255, 255, 255, 0.5);
 }
 
@@ -469,12 +470,14 @@ background: rgba(255, 255, 255, 0.1);
   margin: 1.56rem 0 1.25rem;
 }
 .pass-length .details{
+	color: #837f90;
   display: flex;
   justify-content: space-between;
 }
 
 
 .title {
+	color: #837f90;
   display: block;
   font-size: 16px;
   margin-bottom: 10px;
@@ -485,7 +488,7 @@ background: rgba(255, 255, 255, 0.1);
   display: flex;
   list-style-type: none;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 10px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 23px;
@@ -727,6 +730,7 @@ background: rgba(255, 255, 255, 0.1);
   background: #d43f8d;
 }
 .progress-bar .step .bullet span{
+	color: #837f90;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
