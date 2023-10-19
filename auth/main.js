@@ -113,15 +113,18 @@ document.addEventListener("DOMContentLoaded", function () {
           // underscores or hyphens before @sign
         emailDiv.textContent = '';
         emailDiv1.textContent = '';
+        this.style.borderColor = '';
         document.getElementById("signup-btn").disabled = false;
       }
       else {
         emailDiv.textContent = 'Invalid Email Domain.';
+        this.style.borderColor = 'red';
         document.getElementById('signup-btn').disabled = true;
       }
   
     } else {
       emailDiv1.textContent= 'Invalid Email. Please enter a valid email address.';
+      this.style.borderColor = 'red';
       document.getElementById("signup-btn").disabled = true;
     }
   }

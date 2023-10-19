@@ -36,7 +36,6 @@ button {
 }
 
 .control {
-  -webkit-appearance: none;
   -moz-appearance: none;
   border: 0;
   outline: none;
@@ -72,7 +71,7 @@ button {
   text-align: center;
   margin: 40px 0;
   margin-left: 50px;
-  max-width: -moz-fit-content;
+  width: 560px;
 }
 
 .login-card > h2 {
@@ -138,6 +137,10 @@ button {
   transition: all 0.375s;
 }
 
+.profpic p {
+  color: #837f90;
+}
+
 .username {
   position: relative;
 }
@@ -154,6 +157,7 @@ button {
 
 .countryCode {
   max-width: max-content;
+  -webkit-appearance: none;
 }
 
 .control.countryCode option {
@@ -228,9 +232,9 @@ button {
 }
 
 .strength {
+	margin-top:10px;
 	color: #837f90;
   text-align: left;
-  height: 30px;
   text-transform: capitalize;
 }
 
@@ -340,9 +344,9 @@ button {
 }
 .btn:nth-child(2)::before, /* 2*/
 .btn:nth-child(2)::after {
-	background: #2db2ff;
-	box-shadow: 0 0 5px #2db2ff, 0 0 15px #2db2ff, 0 0 30px #2db2ff,
-		0 0 60px #2db2ff;
+	background: #b177ff;
+	box-shadow: 0 0 5px #b177ff, 0 0 15px #b177ff, 0 0 30px #b177ff,
+		0 0 60px #b177ff;
 }
 .btn:nth-child(3)::before, /* 3*/
 .btn:nth-child(3)::after {
@@ -695,6 +699,78 @@ background: rgba(255, 255, 255, 0.1);
 
 
 
+.form-outer{
+  width: 100%;
+  overflow: hidden;
+}
+.form-outer form{
+  display: flex;
+  width: 400%;
+}
+.form-outer form .page{
+  width: 25%;
+  transition: margin-left 0.3s ease-in-out;
+}
+/* .form-outer form .page .title{
+  text-align: left;
+  font-size: 25px;
+  font-weight: 500;
+}
+.form-outer form .page .field{
+  width: 330px;
+  height: 45px;
+  margin: 45px 0;
+  display: flex;
+  position: relative;
+}
+form .page .field .label{
+  position: absolute;
+  top: -30px;
+  font-weight: 500;
+}
+form .page .field input{
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 18px;
+}
+form .page .field select{
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+form .page .field button{
+  width: 100%;
+  height: calc(100% + 5px);
+  border: none;
+  background: #d33f8d;
+  margin-top: -20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+form .page .field button:hover{
+  background: #000;
+}
+form .page .btns button{
+  margin-top: -20px!important;
+}
+form .page .btns button.prev{
+  margin-right: 3px;
+  font-size: 17px;
+}
+form .page .btns button.next{
+  margin-left: 3px;
+} */
+
 .progress-bar{
   display: flex;
   margin: 40px 0;
@@ -724,8 +800,8 @@ background: rgba(255, 255, 255, 0.1);
   line-height: 30px;
 }
 .progress-bar .step .bullet.active{
-  border-color: #d43f8d;
-  background: #d43f8d;
+  border-color: #b177ff;
+  background: #b177ff;
 }
 .progress-bar .step .bullet span{
 	color: #837f90;
@@ -748,7 +824,7 @@ background: rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.1);
 }
 .progress-bar .step .bullet.active:after{
-  background: #d43f8d;
+  background: #b177ff;
   transform: scaleX(0);
   transform-origin: left;
   animation: animate 0.3s linear forwards;
@@ -763,7 +839,7 @@ background: rgba(255, 255, 255, 0.1);
   display: none;
 }
 .progress-bar .step p.active{
-  color: #d43f8d;
+  color: #b177ff;
   transition: 0.2s linear;
 }
 .progress-bar .step .check{
@@ -779,8 +855,10 @@ background: rgba(255, 255, 255, 0.1);
   color: #fff;
 }
 
-
-
+.already-account {
+  margin-top: 50px;
+  color: #837f90
+}
 
 
 
@@ -864,24 +942,3 @@ input[type="range"]:active::-moz-range-thumb {
 /* input[type="range"]:focus::-moz-range-thumb {
   box-shadow: 0 0 0 13px rgba(255,85,0, .2)    
 } */
-
-/*=============
-Aesthetics 
-=========================*/
-
-
-.range {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  max-width: 500px;
-  margin: 0 auto;
-  height: 4rem;
-  width: 80%;
-  background: #fff;
-  padding: 0px 10px;
-}
-
-
-
-
