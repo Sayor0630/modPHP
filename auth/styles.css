@@ -752,20 +752,24 @@ form .page .field .next{
   border: none;
   background: #b177ff;
   border-radius: 4px;
-  color: #fff;
+  color: #f9f9f9;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 500;
-  transition: 0.5s ease;
+  transition: 0.1s ease;
 }
-/*
+
 form .page .field button:hover{
-  background: #000;
+  background: #9c52ff;
 }
-form .page .btns button{
-  margin-top: -20px!important;
+form .page .field button:active{
+  background: #7244b0;
+	color: #ada5c7;
 }
-*/
+form .page .field button:disabled{
+  background: #837F90;
+	color: #f3f3f3;
+}
 form .page .btns button.prev{
   margin-right: 3px;
 }
@@ -786,13 +790,13 @@ form .page .btns button.next{
 .progress-bar .step p{
   font-weight: 500;
   font-size: 18px;
-  color: #ffffff;
+  color: #f9f9f9;
   margin-bottom: 8px;
 }
 .progress-bar .step .bullet{
   height: 35px;
   width: 35px;
-  border: 2px solid #ffffff;
+  border: 2px solid #f9f9f9;
   display: inline-block;
   border-radius: 50%;
   position: relative;
@@ -854,7 +858,7 @@ form .page .btns button.next{
 }
 .progress-bar .step .check.active{
   display: block;
-  color: #fff;
+  color: #f9f9f9;
 }
 
 .already-account {
