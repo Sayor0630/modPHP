@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   const bars = document.querySelector("#bars"),
     strengthDiv = document.querySelector("#strength"),
-    nameInput= document.querySelector("#name"),
+    nameInput = document.querySelector("#name"),
     nameDiv = document.querySelector("#name-message"),
-    emailInput= document.querySelector("#email"),
+    emailInput = document.querySelector("#email"),
     emailDiv = document.querySelector("#email-message"),
     emailDiv1 = document.querySelector("#email-message-1"),
     mobileNumberInput = document.querySelector("#mobile_number"),
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //username validation
   function checkName() {
     const validPattern = /^[a-zA-Z0-9_]*$/;
-  
+
     if (nameInput.value.length >= 3 && nameInput.value.length <= 15 && validPattern.test(nameInput.value)) {
       nameDiv.textContent = '';
       this.style.borderColor = '';
@@ -87,30 +87,30 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (!validPattern.test(nameInput.value)) {
       nameDiv.textContent = 'Username can only contain letters (a-z, A-Z), numbers (0-9) or underscore "_"';
       this.style.borderColor = 'red';
-        document.getElementById('signup-btn').disabled = true; // Disable button when invalid pattern matched 
-    } else { 
-        nameDiv.textContent= 'Username must be no longer than 15 characters'; 
-        this.style.borderColor = 'red';
-        document.getElementById('signup-btn').disabled = true; //Disable button When character count exceeds fifteen
+      document.getElementById('signup-btn').disabled = true; // Disable button when invalid pattern matched 
+    } else {
+      nameDiv.textContent = 'Username must be no longer than 15 characters';
+      this.style.borderColor = 'red';
+      document.getElementById('signup-btn').disabled = true; //Disable button When character count exceeds fifteen
     }
   }
 
   //email validation
   function checkEmail() {
     const validPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$/;
-  
+
     if (emailInput.value.match(validPattern)) {
-  
+
       // Split the email into parts and get the domain part
       const [_, domain] = emailInput.value.split('@');
-  
+
       // Set an array of accepted domains here 
       const acceptedDomains = ["gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "aol.com", "icloud.com", "protonmail.ch", "mail.com"];
-  
+
       // Check that domain is in array of whitelisted domains
       if (acceptedDomains.includes(domain)) {
-          // The whole string only contains letters, numbers, periods,
-          // underscores or hyphens before @sign
+        // The whole string only contains letters, numbers, periods,
+        // underscores or hyphens before @sign
         emailDiv.textContent = '';
         emailDiv1.textContent = '';
         this.style.borderColor = '';
@@ -121,65 +121,62 @@ document.addEventListener("DOMContentLoaded", function () {
         this.style.borderColor = 'red';
         document.getElementById('signup-btn').disabled = true;
       }
-  
+
     } else {
-      emailDiv1.textContent= 'Invalid Email. Please enter a valid email address.';
+      emailDiv1.textContent = 'Invalid Email. Please enter a valid email address.';
       this.style.borderColor = 'red';
       document.getElementById("signup-btn").disabled = true;
     }
   }
 
-   //phone number validation
-   const phoneNumberPatterns = {
-     '+880': { pattern: /^[0-9]{3,}$/, minLength: 10, maxLength: 11 }, // Bangladesh
-     '+1': { pattern: /^[0-9]{3,}$/, minLength: 10, maxLength: 10 }, // USA
-     '+44': { pattern: /^[0-9]{5,}$/, minLength: 10, maxLength: 11 }, // UK
-     // Add more country patterns here
-   };
-   
-   function checkMobileNumber() {
-     const countryCode = document.getElementById('countryCode').value;
-     const { pattern, minLength, maxLength } = phoneNumberPatterns[countryCode];
-     const mobileNumberInput = document.getElementById('mobile_number');
-     const mobileNumberDiv = document.getElementById('mobile-number-message');
-     const signupBtn = document.getElementById('signup-btn');
-   
-     if (
-       mobileNumberInput.value.length >= minLength &&
-       mobileNumberInput.value.length <= maxLength &&
-       pattern.test(mobileNumberInput.value)
-     ) {
-       mobileNumberDiv.textContent = '';
-       mobileNumberInput.style.borderColor = '';
-       signupBtn.disabled = false;
-     } else if (mobileNumberInput.value.length < minLength) {
-       mobileNumberDiv.textContent = `Phone Number must be at least ${minLength} characters long`;
-       mobileNumberInput.style.borderColor = 'red';
-       signupBtn.disabled = true;
-     } else if (!pattern.test(mobileNumberInput.value)) {
-       mobileNumberDiv.textContent = 'Phone Number can only contain numbers (0-9)';
-       mobileNumberInput.style.borderColor = 'red';
-       signupBtn.disabled = true;
-     } else {
-       mobileNumberDiv.textContent = `Phone Number must be no longer than ${maxLength} characters`;
-       mobileNumberInput.style.borderColor = 'red';
-       signupBtn.disabled = true;
-     }
-   }
-   
+  //phone number validation
+  const phoneNumberPatterns = {
+    '+880': { pattern: /^[0-9]{3,}$/, minLength: 10, maxLength: 11 }, // Bangladesh
+    '+1': { pattern: /^[0-9]{3,}$/, minLength: 10, maxLength: 10 }, // USA
+    '+44': { pattern: /^[0-9]{5,}$/, minLength: 10, maxLength: 11 }, // UK
+    // Add more country patterns here
+  };
 
-    //password length validation
-    function checkPasswordLength() {
-      if (passwordInput.value.length >= 8) {
-        passLengthDiv.textContent = '';
-      } else {
-        passLengthDiv.textContent = 'Password must be at least 8 characters long';
-      }
-      checkPasswordsMatch();
+  function checkMobileNumber() {
+    const countryCode = document.getElementById('countryCode').value;
+    const { pattern, minLength, maxLength } = phoneNumberPatterns[countryCode];
+    const mobileNumberInput = document.getElementById('mobile_number');
+    const mobileNumberDiv = document.getElementById('mobile-number-message');
+    const signupBtn = document.getElementById('signup-btn');
+
+    if (
+      mobileNumberInput.value.length >= minLength &&
+      mobileNumberInput.value.length <= maxLength &&
+      pattern.test(mobileNumberInput.value)
+    ) {
+      mobileNumberDiv.textContent = '';
+      mobileNumberInput.style.borderColor = '';
+      signupBtn.disabled = false;
+    } else if (mobileNumberInput.value.length < minLength) {
+      mobileNumberDiv.textContent = `Phone Number must be at least ${minLength} characters long`;
+      mobileNumberInput.style.borderColor = 'red';
+      signupBtn.disabled = true;
+    } else if (!pattern.test(mobileNumberInput.value)) {
+      mobileNumberDiv.textContent = 'Phone Number can only contain numbers (0-9)';
+      mobileNumberInput.style.borderColor = 'red';
+      signupBtn.disabled = true;
+    } else {
+      mobileNumberDiv.textContent = `Phone Number must be no longer than ${maxLength} characters`;
+      mobileNumberInput.style.borderColor = 'red';
+      signupBtn.disabled = true;
     }
+  }
 
 
-
+  //password length validation
+  function checkPasswordLength() {
+    if (passwordInput.value.length >= 8) {
+      passLengthDiv.textContent = '';
+    } else {
+      passLengthDiv.textContent = 'Password must be at least 8 characters long';
+    }
+    checkPasswordsMatch();
+  }
 
 
   // Hook up event listeners
@@ -213,14 +210,14 @@ document.addEventListener("DOMContentLoaded", function () {
 // img handling
 const image = document.querySelector('img');
 
-image.addEventListener('click', function() {
+image.addEventListener('click', function () {
   // Create a new file input element.
   const fileInput = document.createElement('input');
   fileInput.type = 'file';
   fileInput.accept = 'image/*';
 
   // Listen for the user to select an image file.
-  fileInput.addEventListener('change', function() {
+  fileInput.addEventListener('change', function () {
     // Get the selected image file.
     const file = fileInput.files[0];
 
@@ -228,7 +225,7 @@ image.addEventListener('click', function() {
     const reader = new FileReader();
 
     // Read the selected image file.
-    reader.onload = function() {
+    reader.onload = function () {
       // Set the src attribute of the image element to the data URL of the selected image file.
       image.src = reader.result;
     };

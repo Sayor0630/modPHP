@@ -91,6 +91,7 @@
             <div class="field">
               <button class="firstNext next" id="firstNext">Next</button>
             </div>
+            <h5 class="already-account">Already have an account? <a href="./login.php">Login now</a></h5>
 
           </div>
           <div class="page">
@@ -217,9 +218,12 @@
             </div>
             <div class="field btns">
               <button class="prev-1 prev">Previous</button>
-              <button class="next-1 next">Next</button>
+              <button class="next-1 next" id="next-1">Next</button>
             </div>
           </div>
+          <script>
+
+          </script>
           <div class="page">
             <div class="title">
               Set your Password:
@@ -387,35 +391,27 @@
 
             <div class="field btns">
               <button class="prev-2 prev">Previous</button>
-              <button class="next-2 next">Next</button>
+              <button class="next-2 next" id="next-2">Next</button>
             </div>
+            <script>
+
+
+            </script>
           </div>
           <div class="page">
             <div class="title">
               Review your Selections:
             </div>
-            <div class="field">
-              <div class="label">
-                Username
-              </div>
-              <input type="text">
-            </div>
-            <div class="field">
-              <div class="label">
-                Password
-              </div>
-              <input type="password">
-            </div>
             <div class="field btns">
               <button class="prev-3 prev">Previous</button>
-              <button class="btn" id="signup-btn" type="submit">
+            </div>
+            <button class="btn" id="signup-btn" type="submit">
                 <p>JOIN NOW</p>
               </button>
-            </div>
           </div>
         </form>
       </div>
-      <h5 class="already-account">Already have an account? <a href="./login.php">Login now</a></h5>
+      
 
       <script>
         const slidePage = document.querySelector(".slide-page");
@@ -542,8 +538,10 @@
 
           if (isNameValid && isMobileNumberValid) {
             firstNextButton.disabled = false;
+            document.getElementById("firstNext").innerHTML = "Next";
           } else {
             firstNextButton.disabled = true;
+            document.getElementById("firstNext").innerHTML = "Please fillup all the requied fields ";
           }
         }
 
@@ -554,6 +552,130 @@
         nameInput.addEventListener('input', updateFirstNextButtonState);
         countryCodeInput.addEventListener('input', updateFirstNextButtonState);
         mobileNumberInput.addEventListener('input', updateFirstNextButtonState);
+
+        //Gender Validation
+        const genderSelector = document.getElementById("gender");
+
+        genderSelector.addEventListener("change", function() {
+          const selectedOption = genderSelector.options[genderSelector.selectedIndex];
+
+          if (selectedOption.value !== "") {
+            genderSelector.options[0].disabled = true;
+          }
+        });
+
+        //Grade Validation
+        const gradeSelector = document.getElementById("grade");
+
+        gradeSelector.addEventListener("change", function() {
+          const selectedOption = gradeSelector.options[gradeSelector.selectedIndex];
+
+          if (selectedOption.value !== "") {
+            gradeSelector.options[0].disabled = true;
+          }
+        });
+
+        //Religion Validation
+        const religionSelector = document.getElementById("religion");
+
+        religionSelector.addEventListener("change", function() {
+          const selectedOption = religionSelector.options[religionSelector.selectedIndex];
+
+          if (selectedOption.value !== "") {
+            religionSelector.options[0].disabled = true;
+          }
+        });
+
+        //District Validation
+        const districtSelector = document.getElementById("district");
+
+        districtSelector.addEventListener("change", function() {
+          const selectedOption = districtSelector.options[districtSelector.selectedIndex];
+
+          if (selectedOption.value !== "") {
+            districtSelector.options[0].disabled = true;
+          }
+        });
+
+        // Load functions after loading the page
+        window.addEventListener('load', function() {
+          // Define the select elements and the next button.
+          const genderSelect = document.querySelector('#gender');
+          const gradeSelect = document.querySelector('#grade');
+          const religionSelect = document.querySelector('#religion');
+          const districtSelect = document.querySelector('#district');
+          const next1Button = document.querySelector('#next-1');
+
+          // Disable the next button initially.
+          next1Button.disabled = true;
+          document.getElementById("next-1").innerHTML = "Please fillup all the requied fields ";
+
+          // Add event listeners to the select elements to listen for changes.
+          genderSelect.addEventListener('change', validateAndEnableNext1Button);
+          gradeSelect.addEventListener('change', validateAndEnableNext1Button);
+          religionSelect.addEventListener('change', validateAndEnableNext1Button);
+          districtSelect.addEventListener('change', validateAndEnableNext1Button);
+
+          // Function to validate the select elements and enable the next button if all of the elements are valid.
+          function validateAndEnableNext1Button() {
+            // Check if the value of any of the select elements is empty.
+            if (genderSelect.value === '' || gradeSelect.value === '' || religionSelect.value === '' || districtSelect.value === '') {
+              // Disable the next button.
+              next1Button.disabled = true;
+              document.getElementById("next-1").innerHTML = "Please fillup all the requied fields ";
+            } else {
+              // Enable the next button.
+              next1Button.disabled = false;
+              document.getElementById("next-1").innerHTML = "Next";
+              // Remove any existing error messages.
+              document.querySelector('#gender-message').innerHTML = '';
+              document.querySelector('#grade-message').innerHTML = '';
+              document.querySelector('#religion-message').innerHTML = '';
+              document.querySelector('#district-message').innerHTML = '';
+            }
+          }
+
+          // Add an event listener to the next button to show the error messages if the button is clicked and it is disabled.
+          next1Button.addEventListener('click', function() {
+            if (next1Button.disabled) {
+              // Show the error messages.
+              // document.getElementById("next-1").innerHTML = "Please fillup all the requied fields ";
+            }
+          });
+        });
+
+        //Password validation
+        document.addEventListener("DOMContentLoaded", function() {
+          const passwordInput = document.querySelector("#password");
+          const confirmPassInput = document.querySelector("#confirm-password");
+          const passMatchDiv = document.querySelector("#pass-match-message");
+          const passLengthDiv = document.querySelector("#pass-length-message");
+          const next2Button = document.querySelector("#next-2");
+
+          // Function to check if passwords match and meet length criteria
+          function checkPasswordCriteria() {
+            const password = passwordInput.value;
+            const confirmPassword = confirmPassInput.value;
+            const isPasswordEmpty = password.trim() === '';
+            const isPasswordShort = password.length < 8;
+            const doPasswordsMatch = password === confirmPassword;
+
+            if (!isPasswordEmpty && doPasswordsMatch && !isPasswordShort) {
+              next2Button.disabled = false; // Enable the "Next" button
+              document.getElementById("next-2").innerHTML = "Next ";
+            } else {
+              next2Button.disabled = true; // Disable the "Next" button
+              document.getElementById("next-2").innerHTML = "8+ character matching password required to continue";
+            }
+          }
+
+          // Call the initial check function on page load
+          checkPasswordCriteria();
+
+          // Add input event listeners to the password and confirm password fields
+          passwordInput.addEventListener("input", checkPasswordCriteria);
+          confirmPassInput.addEventListener("input", checkPasswordCriteria);
+        });
       </script>
 
 
