@@ -1,6 +1,3 @@
-
-
-
 * {
   box-sizing: border-box;
 }
@@ -55,8 +52,6 @@ button {
   display: flex;
 }
 
-
-
 .login-card {
   max-height: -moz-fit-content;
   padding: 40px 35px 30px;
@@ -70,6 +65,7 @@ button {
   -webkit-backdrop-filter: blur(5px);
   text-align: center;
   width: 560px;
+  margin: 80px 0px 50px 0px;
 }
 
 .login-card > h2 {
@@ -80,8 +76,8 @@ button {
 }
 
 .login-form h5 {
-	color: #837f90;
-	margin-top: 20px;
+  color: #837f90;
+  margin-top: 20px;
 }
 
 .login-card h5 a {
@@ -90,8 +86,8 @@ button {
 }
 
 .login-card h5 a:hover {
-	color:#15b77b;
-	transition: 0.2s all;
+  color: #15b77b;
+  transition: 0.2s all;
 }
 
 .login-card img {
@@ -136,7 +132,7 @@ button {
 }
 
 .profpic {
-	padding: 20px 0 10px 0;
+  padding: 20px 0 10px 0;
 }
 
 .profpic p {
@@ -234,8 +230,8 @@ button {
 }
 
 .strength {
-	margin-top:10px;
-	color: #837f90;
+  margin-top: 10px;
+  color: #837f90;
   text-align: left;
   text-transform: capitalize;
 }
@@ -249,138 +245,136 @@ button {
   padding: 0 16px;
   margin: 8px 0;
   font-size: 16px;
-	position: relative;
-	top: 0;
-	left: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 .btn p {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: rgba(255, 255, 255, 0.05);
-	box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-	border-top: 1px solid rgba(255, 255, 255, 0.1);
-	border-radius: 30px;
-	padding: 10px;
-	letter-spacing: 1px;
-	text-decoration: none;
-	overflow: hidden;
-	color: white;
-	font-weight: 400px;
-	z-index: 1;
-	transition: 0.5s;
-	webkit-backdrop-filter: blur(15px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 10px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+  color: white;
+  font-weight: 400px;
+  z-index: 1;
+  transition: 0.5s;
+  webkit-backdrop-filter: blur(15px);
 }
 .btn:hover p {
-	letter-spacing: 3px;
+  letter-spacing: 3px;
 }
 .btn p::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 50%;
-	height: 100%;
-	background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
-	transform: skewX(45deg) translate(0);
-	transition: 0.5s;
-	filter: blur(0px);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+  transform: skewX(45deg) translate(0);
+  transition: 0.5s;
+  filter: blur(0px);
 }
 .btn:hover p::before {
-	transform: skewX(45deg) translate(200px);
+  transform: skewX(45deg) translate(200px);
 }
 .btn::before {
-	content: "";
-	position: absolute;
-	left: 50%;
-	transform: translatex(-50%);
-	bottom: -5px;
-	width: 30px;
-	height: 10px;
-	background: #15b77b;
-	border-radius: 10px;
-	transition: 0.5s;
-	transition-delay: 0.5;
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  bottom: -5px;
+  width: 30px;
+  height: 10px;
+  background: #15b77b;
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0.5;
 }
 .btn:hover::before /*lightup button*/ {
-	bottom: 0;
-	height: 90%;
-	width: 80%;
-	border-radius: 30px;
+  bottom: 0;
+  height: 90%;
+  width: 80%;
+  border-radius: 30px;
 }
 
 .btn::after {
-	content: "";
-	position: absolute;
-	left: 50%;
-	transform: translatex(-50%);
-	top: -5px;
-	width: 30px;
-	height: 10px;
-	background: #15b77b;
-	border-radius: 10px;
-	transition: 0.5s;
-	transition-delay: 0.5;
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  top: -5px;
+  width: 30px;
+  height: 10px;
+  background: #15b77b;
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0.5;
 }
 .btn:hover::after /*lightup button*/ {
-	top: 0;
-	height: 90%;
-	width: 80%;
-	border-radius: 30px;
+  top: 0;
+  height: 90%;
+  width: 80%;
+  border-radius: 30px;
 }
 .btn:nth-child(1)::before, /*chnage 1*/
 .btn:nth-child(1)::after {
-	background: #b177ff;
-	box-shadow: 0 0 5px #b177ff, 0 0 15px #b177ff, 0 0 30px #b177ff,
-		0 0 60px #b177ff;
+  background: #b177ff;
+  box-shadow: 0 0 5px #b177ff, 0 0 15px #b177ff, 0 0 30px #b177ff,
+    0 0 60px #b177ff;
 }
 .btn:nth-child(2)::before, /* 2*/
 .btn:nth-child(2)::after {
-	background: #b177ff;
-	box-shadow: 0 0 5px #b177ff, 0 0 15px #b177ff, 0 0 30px #b177ff,
-		0 0 60px #b177ff;
+  background: #b177ff;
+  box-shadow: 0 0 5px #b177ff, 0 0 15px #b177ff, 0 0 30px #b177ff,
+    0 0 60px #b177ff;
 }
 .btn:nth-child(3)::before, /* 3*/
 .btn:nth-child(3)::after {
-	background: #b177ff;
-	box-shadow: 0 0 5px #b177ff, 0 0 15px #b177ff, 0 0 30px #b177ff, 0 0 60px #b177ff;
+  background: #b177ff;
+  box-shadow: 0 0 5px #b177ff, 0 0 15px #b177ff, 0 0 30px #b177ff,
+    0 0 60px #b177ff;
 }
 
 input {
-	outline: none;
-	border: none;
-	border-bottom: 3px solid #837f907d !important;
+  outline: none;
+  border: none;
+  border-bottom: 3px solid #837f907d !important;
 }
 
 input:hover {
-	background: rgb(255 255 255 / 15%);
-	transition: 0.1s all;
+  background: rgb(255 255 255 / 15%);
+  transition: 0.1s all;
 }
 
-input:focus, input:focus:hover {
+input:focus,
+input:focus:hover {
   border: 1px solid #ffffff3f;
   border-bottom: 4px solid #b177ff !important;
   background: #00000080;
   transition: 0.05s all;
 }
 
-
-
-
-
 /*Password Generator*/
 
-.container{
+.container {
   width: 500px;
   max-height: -moz-fit-content;
   border-radius: 4px;
@@ -390,22 +384,22 @@ input:focus, input:focus:hover {
   border-right: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.container h2{
-	color: #f9f9f9;
+.container h2 {
+  color: #f9f9f9;
   font-weight: 600;
   font-size: 1.31rem;
   padding: 1rem 1.75rem;
   border-bottom: 1px solid #d4dbe538;
-	text-align: center;
+  text-align: center;
 }
-.wrapper{
+.wrapper {
   margin: 1.25rem 1.75rem;
 }
-.wrapper .input-box{
+.wrapper .input-box {
   position: relative;
 }
 
-.input-box input{
+.input-box input {
   font-weight: 500;
   letter-spacing: 1.4px;
   border: 0;
@@ -422,70 +416,67 @@ input:focus, input:focus:hover {
   transition: 0.4s;
 }
 
-.input-box input:hover{
-	color:#b177ff;
+.input-box input:hover {
+  color: #b177ff;
 }
-.input-box span{
-	color: #b177ff!important;
-	margin-top: 15px;
+.input-box span {
+  color: #b177ff !important;
+  margin-top: 15px;
   position: absolute;
   right: 8px;
   cursor: pointer;
-	padding: 8px 8px 8px 8px;	
+  padding: 8px 8px 8px 8px;
 }
-.input-box span:hover{
-  color: #f9f9f9!important;
-	background: #b177ff;
-	border-radius: 4px;
-	transition:0.2s all;
-
-	
+.input-box span:hover {
+  color: #f9f9f9 !important;
+  background: #b177ff;
+  border-radius: 4px;
+  transition: 0.2s all;
 }
-.wrapper .pass-indicator{
+.wrapper .pass-indicator {
   width: 100%;
   height: 6px;
   position: relative;
-background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   margin-top: 0.75rem;
   border-radius: 3px;
 }
-.pass-indicator::before{
+.pass-indicator::before {
   position: absolute;
   content: "";
   height: 100%;
   width: 50%;
   border-radius: inherit;
   transition: width 0.3s ease;
-	margin-left: -221px;
+  margin-left: -221px;
 }
-.pass-indicator#weak::before{
+.pass-indicator#weak::before {
   width: 20%;
   background: #bc2b38;
 }
-.pass-indicator#medium::before{
+.pass-indicator#medium::before {
   width: 50%;
   background: #d36f30;
 }
-.pass-indicator#strong::before{
+.pass-indicator#strong::before {
   width: 100%;
   background: #1eb965;
 }
-.wrapper .pass-length{
+.wrapper .pass-length {
   margin: 1.56rem 0 1.25rem;
 }
-.pass-length .details{
-	color: #837f90;
+.pass-length .details {
+  color: #837f90;
   display: flex;
   justify-content: space-between;
 }
 
-
 .title {
-	color: #837f90;
+  color: #837f90;
   display: block;
   font-size: 16px;
   margin-bottom: 10px;
-	text-align: center;
+  text-align: center;
 }
 
 .options {
@@ -493,9 +484,9 @@ background: rgba(255, 255, 255, 0.1);
   list-style-type: none;
   flex-wrap: wrap;
   margin-top: 10px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 23px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 23px;
 }
 
 .option {
@@ -503,10 +494,9 @@ background: rgba(255, 255, 255, 0.1);
   align-items: center;
   margin-bottom: 1rem;
   width: calc(100% / 2);
-	
 }
 
-.option input[type='checkbox'] {
+.option input[type="checkbox"] {
   appearance: none;
   outline: none;
   width: 24px;
@@ -515,8 +505,8 @@ background: rgba(255, 255, 255, 0.1);
   border: 1px solid #a1a1a1 !important;
   margin-right: 8px;
   position: relative;
-	border-radius: 5px;
-	transition: border-color 0.15s ease-in-out;
+  border-radius: 5px;
+  transition: border-color 0.15s ease-in-out;
 }
 
 .option:first-child {
@@ -527,12 +517,11 @@ background: rgba(255, 255, 255, 0.1);
   opacity: 0.7;
 }
 
-.option input[type='checkbox']:hover {
-	background: #837f907d;
-	
+.option input[type="checkbox"]:hover {
+  background: #837f907d;
 }
 
-.option input[type='checkbox']:before {
+.option input[type="checkbox"]:before {
   content: "";
   position: absolute;
   left: 9px;
@@ -544,20 +533,21 @@ background: rgba(255, 255, 255, 0.1);
   border-width: 0 2px 2px 0;
   border-color: transparent;
   opacity: 0;
- transition: opacity 0.15s ease-in-out, border-color 0.15s ease-in-out, transform 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    transform 0.15s ease-in-out;
 }
 
-.option input[type='checkbox']:checked {
-	background: #b177ff;
-	border: none!important;
+.option input[type="checkbox"]:checked {
+  background: #b177ff;
+  border: none !important;
 }
 
-.option input[type='checkbox']:checked:hover {
-	background: #9c52ff;
-	border: none!important;
+.option input[type="checkbox"]:checked:hover {
+  background: #9c52ff;
+  border: none !important;
 }
 
-.option input[type='checkbox']:checked:before {
+.option input[type="checkbox"]:checked:before {
   border-color: black;
   opacity: 1;
 }
@@ -572,17 +562,13 @@ background: rgba(255, 255, 255, 0.1);
   color: #f9f9f9 !important;
 }
 
-
-
 .s {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
-
-
 
 /* Custom styles for the collapsible button */
 .collapsible {
@@ -605,15 +591,15 @@ background: rgba(255, 255, 255, 0.1);
 }
 
 .collapsible:hover {
-	background: rgb(255 255 255 / 25%);
+  background: rgb(255 255 255 / 25%);
 }
 
 .collapsible.active {
-	background: rgb(255 255 255 / 25%);
+  background: rgb(255 255 255 / 25%);
 }
 
 .collapsible.active:hover {
-	background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .collapsible i::before {
@@ -627,25 +613,22 @@ background: rgba(255, 255, 255, 0.1);
   content: "\f106";
 }
 
-.collapsible p{
+.collapsible p {
   margin: 0;
 }
 
-
-        
 .collapsibleContent {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
 }
 
 .alert-message {
-	color: #bc2b38;
-	font-weight: 700;
-	text-align: left;
-	font-size: 12px;
+  color: #bc2b38;
+  font-weight: 700;
+  text-align: left;
+  font-size: 12px;
 }
-
 
 /* .progress-bar{
   display: flex!important;
@@ -688,28 +671,15 @@ background: rgba(255, 255, 255, 0.1);
 
 .pageTwo{display: none;} */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.form-outer{
+.form-outer {
   width: 100%;
   overflow: hidden;
 }
-.form-outer form{
+.form-outer form {
   display: flex;
   width: 400%;
 }
-.form-outer form .page{
+.form-outer form .page {
   width: 25%;
   transition: margin-left 0.3s ease-in-out;
 }
@@ -719,8 +689,8 @@ background: rgba(255, 255, 255, 0.1);
   font-weight: 500;
 
 */
-.form-outer form .page .field{
-  margin: 10px 0 ;
+.form-outer form .page .field {
+  margin: 10px 0;
   display: flex;
   position: relative;
 }
@@ -746,7 +716,7 @@ form .page .field select{
 }
 */
 form .page .field .prev,
-form .page .field .next{
+form .page .field .next {
   width: 100%;
   height: 50px;
   border: none;
@@ -759,41 +729,41 @@ form .page .field .next{
   transition: 0.1s ease;
 }
 
-form .page .field button:hover{
+form .page .field button:hover {
   background: #9c52ff;
 }
-form .page .field button:active{
+form .page .field button:active {
   background: #7244b0;
-	color: #ada5c7;
+  color: #ada5c7;
 }
-form .page .field button:disabled{
-  background: #837F90;
-	color: #f3f3f3;
+form .page .field button:disabled {
+  background: #837f90;
+  color: #f3f3f3;
 }
-form .page .btns button.prev{
+form .page .btns button.prev {
   margin-right: 3px;
 }
-form .page .btns button.next{
+form .page .btns button.next {
   margin-left: 3px;
-} 
+}
 
-.progress-bar{
+.progress-bar {
   display: flex;
   margin: 40px 0;
   user-select: none;
 }
-.progress-bar .step{
+.progress-bar .step {
   text-align: center;
   width: 100%;
   position: relative;
 }
-.progress-bar .step p{
+.progress-bar .step p {
   font-weight: 500;
   font-size: 18px;
   color: #f9f9f9;
   margin-bottom: 8px;
 }
-.progress-bar .step .bullet{
+.progress-bar .step .bullet {
   height: 35px;
   width: 35px;
   border: 2px solid #f9f9f9;
@@ -805,50 +775,50 @@ form .page .btns button.next{
   font-size: 17px;
   line-height: 30px;
 }
-.progress-bar .step .bullet.active{
+.progress-bar .step .bullet.active {
   border-color: #b177ff;
   background: #b177ff;
 }
-.progress-bar .step .bullet span{
-	color: #837f90;
+.progress-bar .step .bullet span {
+  color: #837f90;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
-.progress-bar .step .bullet.active span{
+.progress-bar .step .bullet.active span {
   display: none;
 }
 .progress-bar .step .bullet:before,
-.progress-bar .step .bullet:after{
+.progress-bar .step .bullet:after {
   position: absolute;
-  content: '';
+  content: "";
   bottom: 50%;
   left: 40px;
   height: 5px;
   width: 75px;
-	border-radius: 3px;
+  border-radius: 3px;
   background: rgba(255, 255, 255, 0.1);
 }
-.progress-bar .step .bullet.active:after{
+.progress-bar .step .bullet.active:after {
   background: #b177ff;
   transform: scaleX(0);
   transform-origin: left;
   animation: animate 0.3s linear forwards;
 }
 @keyframes animate {
-  100%{
+  100% {
     transform: scaleX(1);
   }
 }
 .progress-bar .step:last-child .bullet:before,
-.progress-bar .step:last-child .bullet:after{
+.progress-bar .step:last-child .bullet:after {
   display: none;
 }
-.progress-bar .step p.active{
+.progress-bar .step p.active {
   color: #b177ff;
   transition: 0.2s linear;
 }
-.progress-bar .step .check{
+.progress-bar .step .check {
   position: absolute;
   left: 50%;
   top: 70%;
@@ -856,54 +826,46 @@ form .page .btns button.next{
   transform: translate(-50%, -50%);
   display: none;
 }
-.progress-bar .step .check.active{
+.progress-bar .step .check.active {
   display: block;
   color: #f9f9f9;
 }
 
 .already-account {
   margin-top: 50px;
-  color: #837f90
+  color: #837f90;
 }
-
-
-
-
-
-
 
 input[type="range"] {
   /* removing default appearance */
   -webkit-appearance: none;
-  appearance: none; 
+  appearance: none;
   /* creating a custom design */
   width: 100%;
   cursor: pointer;
   outline: none;
   border-radius: 15px;
   /*  overflow: hidden;  remove this line*/
-  
+
   /* New additions */
   height: 6px;
   background: rgba(255, 255, 255, 0.1);
-	border: none !important
+  border: none !important;
 }
 
 input[type="range"]:focus {
-	background: rgba(255, 255, 255, 0.1);
-	
+  background: rgba(255, 255, 255, 0.1);
 }
 
 input[type="range"]:focus:hover {
-	border: none !important;
+  border: none !important;
 }
-
 
 /* Thumb: webkit */
 input[type="range"]::-webkit-slider-thumb {
   /* removing default appearance */
   -webkit-appearance: none;
-  appearance: none; 
+  appearance: none;
   /* creating a custom design */
   height: 25px;
   width: 25px;
@@ -912,7 +874,7 @@ input[type="range"]::-webkit-slider-thumb {
   border: 6px solid #454545;
 
   /* box-shadow: -407px 0 0 400px #f50; emove this line */
-  transition: .1s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
 
 /* Thumb: Firefox */
@@ -922,20 +884,19 @@ input[type="range"]::-moz-range-thumb {
   background-color: #b177ff;
   border-radius: 50%;
   border: 6px solid #454545;
-  
+
   /* box-shadow: -407px 0 0 400px #f50; emove this line */
-  transition: .1s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
 
 /* Hover, active & focus Thumb: Webkit */
 
 input[type="range"]::-webkit-slider-thumb:hover {
-	border: 4px solid #454545;
+  border: 4px solid #454545;
 }
 input[type="range"]:active::-webkit-slider-thumb {
   border: 8px solid #454545;
 }
-
 
 /* Hover, active & focus Thumb: Firfox */
 
