@@ -19,14 +19,14 @@
       <img src="./img/logo/logo.png" alt="Logo">
     </div>
     <ul class="navigation">
-      <li><a href="./index.html">Home</a></li>
-      <li><a href="./about.html">About</a></li>
-      <li><a href="./courses.html">Courses</a></li>
-      <li><a href="./team.html">Team</a></li>
-      <li><a href="./contact.html" class="active">Contact</a></li>
+      <li><a href="./index.php">Home</a></li>
+      <li><a href="./about.php">About</a></li>
+      <li><a href="./courses.php">Courses</a></li>
+      <li><a href="./team.php">Team</a></li>
+      <li><a href="./contact.php" class="active">Contact</a></li>
     </ul>
     <div class="signin">
-      <a href="./singin.html">Sign In</a>
+      <a href="./auth/login.php">Sign In</a>
     </div>
   </nav>
 

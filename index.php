@@ -20,10 +20,10 @@
           <img src="./img/logo/logo.png" alt="Logo">
         </div>
         <ul class="navigation">
-          <li><a href="./index.html" class="active">Home</a></li>
-          <li><a href="./courses.html">Courses</a></li>
-          <li><a href="./team.html">Team</a></li>
-          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./index.php" class="active">Home</a></li>
+          <li><a href="./courses.php">Courses</a></li>
+          <li><a href="./team.php">Team</a></li>
+          <li><a href="./contact.php">Contact</a></li>
         </ul>
         <div class="signin">
           <a href="./auth/login.php">SIGN IN</a>

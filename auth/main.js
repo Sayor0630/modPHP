@@ -1,3 +1,17 @@
+function disableTabindex(div) {
+  // Get all focusable elements inside the div
+  const focusableElements = div.querySelectorAll('a, button, input, select, textarea');
+
+  // Set the tabindex of all focusable elements to -1
+  focusableElements.forEach(element => element.tabIndex = -1);
+}
+
+// Get the div element that you want to disable tabindex for
+const div = document.querySelector('.login-form');
+
+// Disable tabindex for all elements inside the div
+disableTabindex(div);
+
 document.addEventListener("DOMContentLoaded", function () {
   const bars = document.querySelector("#bars"),
     strengthDiv = document.querySelector("#strength"),
@@ -76,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function checkName() {
     const validPattern = /^[a-zA-Z0-9_]*$/;
 
-    if (nameInput.value.length >= 3 && nameInput.value.length <= 15 && validPattern.test(nameInput.value)) {
+    if (nameInput.value.length >= 3 && nameInput.value.length <= 10 && validPattern.test(nameInput.value)) {
       nameDiv.textContent = '';
       this.style.borderColor = '';
       document.getElementById('signup-btn').disabled = false; // Enable button when all criteria are met
@@ -89,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
       this.style.borderColor = 'red';
       document.getElementById('signup-btn').disabled = true; // Disable button when invalid pattern matched 
     } else {
-      nameDiv.textContent = 'Username must be no longer than 15 characters';
+      nameDiv.textContent = 'Username must be no longer than 10 characters';
       this.style.borderColor = 'red';
       document.getElementById('signup-btn').disabled = true; //Disable button When character count exceeds fifteen
     }
@@ -129,7 +143,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  //phone number validation
+  // Phone number validation
+  // Phone number validation
   const phoneNumberPatterns = {
     '+880': { pattern: /^[0-9]{3,}$/, minLength: 10, maxLength: 11 }, // Bangladesh
     '+1': { pattern: /^[0-9]{3,}$/, minLength: 10, maxLength: 10 }, // USA
@@ -137,35 +152,39 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add more country patterns here
   };
 
+
+  // Add an event listener to the mobile number input field
+  mobileNumberInput.addEventListener('input', function () {
+    checkMobileNumber();
+  });
+
   function checkMobileNumber() {
     const countryCode = document.getElementById('countryCode').value;
     const { pattern, minLength, maxLength } = phoneNumberPatterns[countryCode];
-    const mobileNumberInput = document.getElementById('mobile_number');
-    const mobileNumberDiv = document.getElementById('mobile-number-message');
-    const signupBtn = document.getElementById('signup-btn');
 
-    if (
-      mobileNumberInput.value.length >= minLength &&
-      mobileNumberInput.value.length <= maxLength &&
-      pattern.test(mobileNumberInput.value)
-    ) {
+    // Check if the phone number contains at least one number
+    if (!/^\d+$/.test(mobileNumberInput.value)) {
+      mobileNumberDiv.textContent = 'Phone number can only contain numbers (0-9).';
+      return;
+    }
+
+    // Check if the phone number is empty
+    if (mobileNumberInput.value === '') {
+      mobileNumberDiv.textContent = 'Please enter a phone number.';
+    } else if (mobileNumberInput.value.length < minLength) {
+      mobileNumberDiv.textContent = `Phone number must be at least ${minLength} characters long.`;
+    } else if (mobileNumberInput.value.length > maxLength) {
+      mobileNumberDiv.textContent = `Phone number must be no longer than ${maxLength} characters.`;
+    } else if (!pattern.test(mobileNumberInput.value)) {
+      mobileNumberDiv.textContent = 'Phone number can only contain numbers (0-9).';
+    } else {
       mobileNumberDiv.textContent = '';
       mobileNumberInput.style.borderColor = '';
       signupBtn.disabled = false;
-    } else if (mobileNumberInput.value.length < minLength) {
-      mobileNumberDiv.textContent = `Phone Number must be at least ${minLength} characters long`;
-      mobileNumberInput.style.borderColor = 'red';
-      signupBtn.disabled = true;
-    } else if (!pattern.test(mobileNumberInput.value)) {
-      mobileNumberDiv.textContent = 'Phone Number can only contain numbers (0-9)';
-      mobileNumberInput.style.borderColor = 'red';
-      signupBtn.disabled = true;
-    } else {
-      mobileNumberDiv.textContent = `Phone Number must be no longer than ${maxLength} characters`;
-      mobileNumberInput.style.borderColor = 'red';
-      signupBtn.disabled = true;
     }
   }
+
+
 
 
   //password length validation

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,14 +24,14 @@
           <img src="./img/logo/logo.png" alt="Logo">
         </div>
         <ul class="navigation">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./courses.html">Courses</a></li>
-          <li><a href="./team.html">Team</a></li>
-          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./index.php">Home</a></li>
+          <li><a href="./about.php">About</a></li>
+          <li><a href="./courses.php">Courses</a></li>
+          <li><a href="./team.php">Team</a></li>
+          <li><a href="./contact.php">Contact</a></li>
         </ul>
         <div class="signin">
-          <a href="./singin.html">Sign In</a>
+          <a href="./auth/login.php">Sign In</a>
         </div>
       </nav>
       
@@ -122,5 +123,15 @@
       
       <!-- js files -->
       <script src="./js/nav.js"></script>
+      <script type="text/javascript" src="./js/vanilla-tilt.js"></script>
+      <script>
+        VanillaTilt.init(document.querySelectorAll(".team-member"), {
+          max: 4,
+          speed: 400,
+          glare: true,
+          "max-glare": 0.3,
+          scale: 1.1,
+        });
+      </script>
 </body>
 </html>

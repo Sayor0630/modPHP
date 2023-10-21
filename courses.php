@@ -7,6 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" type="text/css" href="./css/courses.css">
+    <link rel="stylesheet" type="text/css" href="./css/button.css">
 
 
 
@@ -20,17 +22,56 @@
           <img src="./img/logo/logo.png" alt="Logo">
         </div>
         <ul class="navigation">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./about.html">About</a></li>
+          <li><a href="./index.php">Home</a></li>
+          <li><a href="./about.php">About</a></li>
           <li><a href="./courses.html" class="active">Courses</a></li>
-          <li><a href="./team.html">Team</a></li>
-          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./team.php">Team</a></li>
+          <li><a href="./contact.php">Contact</a></li>
         </ul>
         <div class="signin">
-          <a href="./singin.html">Sign In</a>
+          <a href="./auth/login.php">Sign In</a>
         </div>
       </nav>
+      <!-- ================================================================================================= -->
+
+      <div class="container">
+        <div class="card">
+          <div class="content">
+            <div class="sing__content">
+              <h2>01</h2>
+              <h3>White Aprone 2022</h3>
+              <p>Full Medical Package for HSC 2022 Candidates</p>
+            </div> 
+            <div class="banner"><img src="./img/courses/wa.jpg" alt=""></div>
+            <div class="btn"><a href="./enroll_page.html">Enroll Now</a></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <div class="sing__content">
+              <h2>02</h2>
+              <h3>White Aprone 2022</h3>
+              <p>Full Medical Package for HSC 2022 Candidates</p>
+            </div> 
+            <div class="banner"><img src="./img/courses/wa.jpg" alt=""></div>
+            <div class="btn"><a href="./enroll_page.html">Enroll Now</a></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <div class="sing__content">
+              <h2>03</h2>
+              <h3>White Aprone 2022</h3>
+              <p>Full Medical Package for HSC 2022 Candidates</p>
+            </div> 
+            <div class="banner"><img src="./img/courses/wa.jpg" alt=""></div>
+            <div class="btn"><a href="./enroll_page.html">Enroll Now</a></div>
+          </div>
+        </div>
+      </div>
+
       
+      <!-- ==================================================================================================================== -->
 
       <footer>
         <div class="top-section">
@@ -56,5 +97,16 @@
       </footer>
       <!-- js files -->
       <script src="./js/nav.js"></script>
+      <script type="text/javascript" src="./js/vanilla-tilt.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".card"), {
+      max: 4,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.3,
+      scale: 1.1,
+    });
+  </script>
+
 </body>
 </html>

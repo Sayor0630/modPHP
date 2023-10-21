@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+*:before,
+*:after {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+*:not(i) {
+	font-family: "Roboto Mono", monospace;
+	color: #ffffff;
+}
+body {
+	height: 100vh;
+	background-color: #02070d;
+}
+.box {
+	position: absolute;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+}
+.container {
+	width: 320px;
+}
+.clock {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.06);
+	-webkit-backdrop-filter: blur(15px);
+	backdrop-filter: blur(15px);
+	padding: 50px 25px;
+	-webkit-box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	border: 1.5px solid rgba(255, 255, 255, 0.06);
+	border-radius: 8px;
+}
+
+.shape1 {
+	height: 150px;
+	width: 150px;
+	position: absolute;
+	background: -o-linear-gradient(315deg, #ff5b84, #eb3461);
+	background: linear-gradient(135deg, #ff5b84, #eb3461);
+	border-radius: 50%;
+	bottom: 130px;
+	right: -50px;
+	z-index: -1;
+}
+.shape2 {
+	height: 150px;
+	width: 150px;
+	position: absolute;
+	background: -o-linear-gradient(315deg, #426cf8, #3ebdf0);
+	background: linear-gradient(135deg, #426cf8, #3ebdf0);
+	border-radius: 50%;
+	top: 100px;
+	left: -50px;
+	z-index: -1;
+}
+
+.wrapper {
+	text-align: center;
+}
+#time {
+	font-size: 40px;
+	display: inline-block;
+}
+#day {
+	position: relative;
+	font-size: 16px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #c5c5c5;
+	text-align: center;
+}
+#midday {
+	display: inline-block;
+	font-size: 30px;
+}
+a {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 18px;
+	background-color: rgba(255, 255, 255, 0.06);
+	-webkit-backdrop-filter: blur(15px);
+	backdrop-filter: blur(15px);
+	padding: 10px 0;
+	margin-top: 20px;
+	-webkit-box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	border: 1.5px solid rgba(255, 255, 255, 0.06);
+	border-radius: 8px;
+}
+i.fab {
+	color: #ff0000;
+}
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="container">
+            <div class="shape1"></div>
+            <div class="shape2"></div>
+            <div class="clock">
+                <div id="day"></div>
+                <div class="wrapper">
+                    <div id="time"></div>
+                    <div id="midday"></div>
+                </div>
+            </div>
+        </div>
+        <a href="https://youtu.be/4Q-i9gbS_PE" target="_blank">Watch Me Code &nbsp;<i class="fab fa-youtube"></i></a>
+    </div>
+
+
+    <script>
+        const time = document.getElementById("time");
+const day = document.getElementById("day");
+const midday = document.getElementById("midday");
+
+let clock = setInterval(
+	function calcTime() {
+		let date_now = new Date();
+		let hr = date_now.getHours();
+		let min = date_now.getMinutes();
+		let sec = date_now.getSeconds();
+		let middayValue = "AM";
+
+		let days = [
+			"Sunday",
+			"Monday",
+			"Tuesday",
+			"Wednesday",
+			"Thursday",
+			"Friday",
+			"Saturday"
+		];
+
+		day.textContent = days[date_now.getDay()];
+
+		middayValue = hr >= 12 ? "PM" : "AM";
+
+		if (hr == 0) {
+			hr = 12;
+		} else if (hr > 12) {
+			hr -= 12;
+		}
+
+		hr = hr < 10 ? "0" + hr : hr;
+		min = min < 10 ? "0" + min : min;
+		sec = sec < 10 ? "0" + sec : sec;
+
+		time.textContent = hr + ":" + min + ":" + sec;
+		midday.textContent = middayValue;
+	},
+
+	1000
+);
+
+    </script>
+</body>
+</html>
