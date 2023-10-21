@@ -68,7 +68,7 @@ button {
   margin: 80px 0px 50px 0px;
 }
 
-.login-card > h2 {
+.login-card>h2 {
   font-size: 36px;
   font-weight: 600;
   margin: 0 0 6px;
@@ -99,7 +99,7 @@ button {
   margin: 0 auto 10px;
 }
 
-.login-card > h3 {
+.login-card>h3 {
   color: #837f90;
   margin: 0 0 20px;
   font-weight: 500;
@@ -116,7 +116,7 @@ button {
   color: #868b94;
 }
 
-.login-form > button.control {
+.login-form>button.control {
   cursor: pointer;
   width: 100%;
   height: 56px;
@@ -159,11 +159,16 @@ button {
 }
 
 .control.countryCode option {
-  background: rgba(255, 255, 255, 0.5); /* Change the background color */
-  padding: 5px 10px; /* Add padding */
-  font-size: 14px; /* Set font size */
-  color: #333; /* Set font color */
-  border-radius: 3px; /* Add rounded corners */
+  background: rgba(255, 255, 255, 0.5);
+  /* Change the background color */
+  padding: 5px 10px;
+  /* Add padding */
+  font-size: 14px;
+  /* Set font size */
+  color: #333;
+  /* Set font color */
+  border-radius: 3px;
+  /* Add rounded corners */
 }
 
 @keyframes spin {
@@ -243,16 +248,17 @@ button {
   width: 100%;
   height: 56px;
   padding: 0 16px;
-  margin: 8px 0;
+  margin: 0 auto;
   font-size: 16px;
   position: relative;
-  top: 0;
+  top: 0px;
   left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
 }
+
 .btn p {
   position: absolute;
   top: 0;
@@ -277,9 +283,11 @@ button {
   transition: 0.5s;
   webkit-backdrop-filter: blur(15px);
 }
+
 .btn:hover p {
   letter-spacing: 3px;
 }
+
 .btn p::before {
   content: "";
   position: absolute;
@@ -292,9 +300,11 @@ button {
   transition: 0.5s;
   filter: blur(0px);
 }
+
 .btn:hover p::before {
   transform: skewX(45deg) translate(200px);
 }
+
 .btn::before {
   content: "";
   position: absolute;
@@ -308,7 +318,11 @@ button {
   transition: 0.5s;
   transition-delay: 0.5;
 }
-.btn:hover::before /*lightup button*/ {
+
+.btn:hover::before
+
+/*lightup button*/
+  {
   bottom: 0;
   height: 90%;
   width: 80%;
@@ -328,26 +342,172 @@ button {
   transition: 0.5s;
   transition-delay: 0.5;
 }
-.btn:hover::after /*lightup button*/ {
+
+.btn:hover::after
+
+/*lightup button*/
+  {
   top: 0;
   height: 90%;
   width: 80%;
   border-radius: 30px;
 }
-.btn:nth-child(1)::before, /*chnage 1*/
+
+.btn:nth-child(1)::before,
+/*chnage 1*/
 .btn:nth-child(1)::after {
   background: #b177ff;
   box-shadow: 0 0 5px #b177ff, 0 0 15px #b177ff, 0 0 30px #b177ff,
     0 0 60px #b177ff;
 }
-.btn:nth-child(2)::before, /* 2*/
+
+.btn:nth-child(2)::before,
+/* 2*/
 .btn:nth-child(2)::after {
   background: #b177ff;
   box-shadow: 0 0 5px #b177ff, 0 0 15px #b177ff, 0 0 30px #b177ff,
     0 0 60px #b177ff;
 }
-.btn:nth-child(3)::before, /* 3*/
+
+.btn:nth-child(3)::before,
+/* 3*/
 .btn:nth-child(3)::after {
+  background: #b177ff;
+  box-shadow: 0 0 5px #b177ff, 0 0 15px #b177ff, 0 0 30px #b177ff,
+    0 0 60px #b177ff;
+}
+
+.generate-btn {
+  border: 0;
+  border-radius: 8px;
+  outline: none;
+  width: 80%;
+  height: 56px;
+  padding: 0 16px;
+  margin: 0 auto;
+  font-size: 16px;
+  position: relative;
+  top: -20px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.generate-btn p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 10px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+  color: white;
+  font-weight: 400px;
+  z-index: 1;
+  transition: 0.5s;
+  webkit-backdrop-filter: blur(15px);
+}
+
+.generate-btn:hover p {
+  letter-spacing: 3px;
+}
+
+.generate-btn p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+  transform: skewX(45deg) translate(0);
+  transition: 0.5s;
+  filter: blur(0px);
+}
+
+.generate-btn:hover p::before {
+  transform: skewX(45deg) translate(200px);
+}
+
+.generate-btn::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  bottom: -5px;
+  width: 30px;
+  height: 10px;
+  background: #15b77b;
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0.5;
+}
+
+.generate-btn:hover::before
+
+/*lightup button*/
+  {
+  bottom: 0;
+  height: 90%;
+  width: 80%;
+  border-radius: 30px;
+}
+
+.generate-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  top: -5px;
+  width: 30px;
+  height: 10px;
+  background: #15b77b;
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0.5;
+}
+
+.generate-btn:hover::after
+
+/*lightup button*/
+  {
+  top: 0;
+  height: 90%;
+  width: 80%;
+  border-radius: 30px;
+}
+
+.generate-btn:nth-child(1)::before,
+/*chnage 1*/
+.generate-btn:nth-child(1)::after {
+  background: #b177ff;
+  box-shadow: 0 0 5px #b177ff, 0 0 15px #b177ff, 0 0 30px #b177ff,
+    0 0 60px #b177ff;
+}
+
+.generate-btn:nth-child(2)::before,
+/* 2*/
+.generate-btn:nth-child(2)::after {
+  background: #b177ff;
+  box-shadow: 0 0 5px #b177ff, 0 0 15px #b177ff, 0 0 30px #b177ff,
+    0 0 60px #b177ff;
+}
+
+.generate-btn:nth-child(3)::before,
+/* 3*/
+.generate-btn:nth-child(3)::after {
   background: #b177ff;
   box-shadow: 0 0 5px #b177ff, 0 0 15px #b177ff, 0 0 30px #b177ff,
     0 0 60px #b177ff;
@@ -392,9 +552,11 @@ input:focus:hover {
   border-bottom: 1px solid #d4dbe538;
   text-align: center;
 }
+
 .wrapper {
   margin: 1.25rem 1.75rem;
 }
+
 .wrapper .input-box {
   position: relative;
 }
@@ -419,6 +581,7 @@ input:focus:hover {
 .input-box input:hover {
   color: #b177ff;
 }
+
 .input-box span {
   color: #b177ff !important;
   margin-top: 15px;
@@ -427,12 +590,14 @@ input:focus:hover {
   cursor: pointer;
   padding: 8px 8px 8px 8px;
 }
+
 .input-box span:hover {
   color: #f9f9f9 !important;
   background: #b177ff;
   border-radius: 4px;
   transition: 0.2s all;
 }
+
 .wrapper .pass-indicator {
   width: 100%;
   height: 6px;
@@ -441,6 +606,7 @@ input:focus:hover {
   margin-top: 0.75rem;
   border-radius: 3px;
 }
+
 .pass-indicator::before {
   position: absolute;
   content: "";
@@ -450,21 +616,26 @@ input:focus:hover {
   transition: width 0.3s ease;
   margin-left: -221px;
 }
+
 .pass-indicator#weak::before {
   width: 20%;
   background: #bc2b38;
 }
+
 .pass-indicator#medium::before {
   width: 50%;
   background: #d36f30;
 }
+
 .pass-indicator#strong::before {
   width: 100%;
   background: #1eb965;
 }
+
 .wrapper .pass-length {
   margin: 1.56rem 0 1.25rem;
 }
+
 .pass-length .details {
   color: #837f90;
   display: flex;
@@ -675,14 +846,19 @@ input:focus:hover {
   width: 100%;
   overflow: hidden;
 }
+
 .form-outer form {
   display: flex;
   width: 400%;
 }
+
 .form-outer form .page {
   width: 25%;
+  padding-left: 15px;
+  padding-right: 15px;
   transition: margin-left 0.3s ease-in-out;
 }
+
 /* .form-outer form .page .title{
   text-align: left;
   font-size: 25px;
@@ -694,6 +870,7 @@ input:focus:hover {
   display: flex;
   position: relative;
 }
+
 /*
 form .page .field .label{
   position: absolute;
@@ -732,17 +909,21 @@ form .page .field .next {
 form .page .field button:hover {
   background: #9c52ff;
 }
+
 form .page .field button:active {
   background: #7244b0;
   color: #ada5c7;
 }
+
 form .page .field button:disabled {
   background: #837f90;
   color: #f3f3f3;
 }
+
 form .page .btns button.prev {
   margin-right: 3px;
 }
+
 form .page .btns button.next {
   margin-left: 3px;
 }
@@ -752,17 +933,20 @@ form .page .btns button.next {
   margin: 40px 0;
   user-select: none;
 }
+
 .progress-bar .step {
   text-align: center;
   width: 100%;
   position: relative;
 }
+
 .progress-bar .step p {
   font-weight: 500;
   font-size: 18px;
   color: #f9f9f9;
   margin-bottom: 8px;
 }
+
 .progress-bar .step .bullet {
   height: 35px;
   width: 35px;
@@ -775,19 +959,23 @@ form .page .btns button.next {
   font-size: 17px;
   line-height: 30px;
 }
+
 .progress-bar .step .bullet.active {
   border-color: #b177ff;
   background: #b177ff;
 }
+
 .progress-bar .step .bullet span {
   color: #837f90;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
+
 .progress-bar .step .bullet.active span {
   display: none;
 }
+
 .progress-bar .step .bullet:before,
 .progress-bar .step .bullet:after {
   position: absolute;
@@ -799,25 +987,30 @@ form .page .btns button.next {
   border-radius: 3px;
   background: rgba(255, 255, 255, 0.1);
 }
+
 .progress-bar .step .bullet.active:after {
   background: #b177ff;
   transform: scaleX(0);
   transform-origin: left;
   animation: animate 0.3s linear forwards;
 }
+
 @keyframes animate {
   100% {
     transform: scaleX(1);
   }
 }
+
 .progress-bar .step:last-child .bullet:before,
 .progress-bar .step:last-child .bullet:after {
   display: none;
 }
+
 .progress-bar .step p.active {
   color: #b177ff;
   transition: 0.2s linear;
 }
+
 .progress-bar .step .check {
   position: absolute;
   left: 50%;
@@ -826,6 +1019,7 @@ form .page .btns button.next {
   transform: translate(-50%, -50%);
   display: none;
 }
+
 .progress-bar .step .check.active {
   display: block;
   color: #f9f9f9;
@@ -894,6 +1088,7 @@ input[type="range"]::-moz-range-thumb {
 input[type="range"]::-webkit-slider-thumb:hover {
   border: 4px solid #454545;
 }
+
 input[type="range"]:active::-webkit-slider-thumb {
   border: 8px solid #454545;
 }
@@ -903,9 +1098,29 @@ input[type="range"]:active::-webkit-slider-thumb {
 input[type="range"]::-moz-range-thumb:hover {
   border: 4px solid #454545;
 }
+
 input[type="range"]:active::-moz-range-thumb {
   border: 8px solid #454545;
 }
+
 /* input[type="range"]:focus::-moz-range-thumb {
   box-shadow: 0 0 0 13px rgba(255,85,0, .2)    
 } */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+td {
+  color: #837F90;
+  padding: 8px;
+  text-align: left;
+  width: calc(100%/2);
+}
+th {
+  text-align: left;
+  color: #F9F9F9;
+  width: 300px
+}
