@@ -1081,6 +1081,7 @@ form .page .field .prev:hover {
 
 form .page .field .prev:active {
   background: rgb(255 255 255 / 5%);
+  color: #ada5c7;
   border: 1px solid rgb(255 255 255 / 5%);
   transition: none;
 }
@@ -1090,6 +1091,10 @@ form .page .field .next {
   height: 50px;
   border: none;
   background: #b177ff;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-botton: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 4px;
   color: #f9f9f9;
   cursor: pointer;
@@ -1098,18 +1103,30 @@ form .page .field .next {
   transition: 0.1s ease;
 }
 
-form .page .field button:hover {
+form .page .field .next:hover {
   background: #9c52ff;
+  border: 1px solid rgb(255 255 255 / 5%);
+  transition: 0.1s ease;
 }
 
-form .page .field button:active {
+form .page .field .next:active {
   background: #7244b0;
   color: #ada5c7;
+  border: none;
+  transition: 0.1s ease;
 }
 
 form .page .field button:disabled {
   background: #837f90;
   color: #f3f3f3;
+  border: none;
+}
+
+form .page .field button:disabled:hover {
+  background: #837f90;
+  color: #f3f3f3;
+  border: none;
+  transition: none;
 }
 
 form .page .btns button.prev {
