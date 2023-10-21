@@ -908,6 +908,7 @@ input:focus:hover {
 
 .collapsible:hover {
   background: rgb(255 255 255 / 25%);
+  transition: 0.2s;
 }
 
 .collapsible.active {
@@ -916,6 +917,7 @@ input:focus:hover {
 
 .collapsible.active:hover {
   background: rgba(255, 255, 255, 0.1);
+  transition: 0.2s;
 }
 
 .collapsible:active {
