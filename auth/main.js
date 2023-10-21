@@ -211,6 +211,13 @@ document.addEventListener("DOMContentLoaded", function () {
 const image = document.querySelector('#profpic img');
 const profilePicPreview = document.querySelector('#profilePicPreview');
 
+// Execute the code on page load.
+window.addEventListener('load', function () {
+  // Load the image from the profpic div into the profilePicPreview image.
+  profilePicPreview.src = image.src;
+});
+
+// Update the profile picture preview image when the user clicks on the image in the profpic div.
 image.addEventListener('click', function () {
   // Create a new file input element.
   const fileInput = document.createElement('input');
@@ -244,12 +251,6 @@ image.addEventListener('click', function () {
 
       // Update the profile picture preview image.
       profilePicPreview.src = reader.result;
-
-      // Add an event listener to track the load event of the profile picture preview image.
-      profilePicPreview.addEventListener('load', function () {
-        // Update the display of the profile picture preview image.
-        profilePicPreview.style.display = 'block';
-      });
     };
 
     reader.onerror = function (event) {
@@ -263,10 +264,3 @@ image.addEventListener('click', function () {
   // Click the file input element to open the file selection dialog.
   fileInput.click();
 });
-
-
-
-
-
-// NEXT PAGE HANDLER
-
