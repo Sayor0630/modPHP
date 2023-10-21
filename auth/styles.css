@@ -686,10 +686,7 @@ input:focus:hover {
   max-height: -moz-fit-content;
   max-height: fit-content;
   border-radius: 4px;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgb(255 255 255 / 25%);
 }
 
 .container h2 {
@@ -919,6 +916,18 @@ input:focus:hover {
 
 .collapsible.active:hover {
   background: rgba(255, 255, 255, 0.1);
+}
+
+.collapsible:active {
+  background: rgb(255 255 255 / 5%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.1s;
+}
+
+.collapsible.active:active:hover {
+  background: rgb(255 255 255 / 5%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.1s;
 }
 
 .collapsible i::before {
