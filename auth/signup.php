@@ -69,7 +69,7 @@
             <div class="title">
               Give your Basic Info:
             </div>
-            <div class="profpic">
+            <div class="profpic" id="profpic">
               <img src="https://i.pinimg.com/originals/0a/5f/ea/0a5feae400fc816c4ca2aca8bd67a168.jpg" />
               <p>Select your Profile Picture</p>
               <div id='profpic-message' class="alert-message"></div>
@@ -413,31 +413,34 @@
     <!-- Add a preview section for selected data -->
 
     <table>
-        <tr>
-            <th class="label"><strong>Username<sup class="required-sign">*</sup>:</strong></td>
-            <td> <span class="preview-text" id="previewUsername"></span></td>
-            <th class="label"><strong>Mobile<sup class="required-sign">*</sup>:</strong></td>
-            <td> <span class="preview-text" id="previewMobileNumber"></span></td>
-        </tr>
-        <tr>
-            <th class="label"><strong>Grade<sup class="required-sign">*</sup>:</strong></td>
-            <td> <span class="preview-text" id="previewGrade"></span></td>
-            <th class="label"><strong>Gender<sup class="required-sign">*</sup>:</strong></td>
-            <td> <span class="preview-text" id="previewGender"></span></td>
-        </tr>
-        <tr>
-            <th class="label"><strong>Religion<sup class="required-sign">*</sup>:</strong></td>
-            <td> <span class="preview-text" id="previewReligion"></span></td>
-            <th class="label"><strong>District<sup class="required-sign">*</sup>:</strong></td>
-            <td> <span class="preview-text" id="previewDistrict"></span></td>
-        </tr>
-        <tr>
-        </tr>
-        <tr>
-            <th class="label"><strong>Email:</strong></td>
-            <td colspan="6"> <span id="previewEmail"></span></td>
-        </tr>
+      <tr>
+        <th colspan="2" class="label"><strong>Profile Picture:<sup class="required-sign">*</sup>:</strong></th>
+        <td colspan="2"><img class="profilePicPreview" id="profilePicPreview" data-target="#profpic" /></td>
+      </tr>
+      <tr>
+        <th class="label"><strong>Username<sup class="required-sign">*</sup>:</strong></td>
+        <td> <span class="preview-text" id="previewUsername"></span></td>
+        <th class="label"><strong>Mobile<sup class="required-sign">*</sup>:</strong></td>
+        <td> <span class="preview-text" id="previewMobileNumber"></span></td>
+      </tr>
+      <tr>
+        <th class="label"><strong>Grade<sup class="required-sign">*</sup>:</strong></td>
+        <td> <span class="preview-text" id="previewGrade"></span></td>
+        <th class="label"><strong>Gender<sup class="required-sign">*</sup>:</strong></td>
+        <td> <span class="preview-text" id="previewGender"></span></td>
+      </tr>
+      <tr>
+        <th class="label"><strong>Religion<sup class="required-sign">*</sup>:</strong></td>
+        <td> <span class="preview-text" id="previewReligion"></span></td>
+        <th class="label"><strong>District<sup class="required-sign">*</sup>:</strong></td>
+        <td> <span class="preview-text" id="previewDistrict"></span></td>
+      </tr>
+      <tr>
+        <th class="label"><strong>Email:</strong></td>
+        <td colspan="6"> <span class="preview-text" id="previewEmail"></span></td>
+      </tr>
     </table>
+
   </div>
 
   <div class="field btns">
@@ -748,6 +751,12 @@
     document.getElementById("previewReligion").textContent = religion;
     document.getElementById("previewDistrict").textContent = district;
     document.getElementById("previewEmail").textContent = email;
+
+    // // Update the profile picture preview
+    // const profilePic = document.getElementById("profpic");
+    // const profilePicPreview = document.getElementById("profilePicPreview");
+    // const profilePicSrc = profilePic.querySelector("img").src;
+    // profilePicPreview.src = profilePicSrc;
   }
 
   // Attach the updatePreview function to form inputs' change events

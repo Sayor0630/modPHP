@@ -208,7 +208,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // img handling
-const image = document.querySelector('img');
+const image = document.querySelector('#profpic img');
+const profilePicPreview = document.querySelector('#profilePicPreview');
 
 image.addEventListener('click', function () {
   // Create a new file input element.
@@ -221,13 +222,39 @@ image.addEventListener('click', function () {
     // Get the selected image file.
     const file = fileInput.files[0];
 
+    // Validate the selected image file.
+    if (!file.type.match('image/*')) {
+      alert('Please select an image file.');
+      return;
+    }
+
     // Create a new FileReader object.
     const reader = new FileReader();
+
+    // Add an event listener to track the progress of the image upload.
+    reader.addEventListener('progress', function (event) {
+      // Update the progress bar.
+      // ...
+    });
 
     // Read the selected image file.
     reader.onload = function () {
       // Set the src attribute of the image element to the data URL of the selected image file.
       image.src = reader.result;
+
+      // Update the profile picture preview image.
+      profilePicPreview.src = reader.result;
+
+      // Add an event listener to track the load event of the profile picture preview image.
+      profilePicPreview.addEventListener('load', function () {
+        // Update the display of the profile picture preview image.
+        profilePicPreview.style.display = 'block';
+      });
+    };
+
+    reader.onerror = function (event) {
+      alert('An error occurred while uploading the image file.');
+      console.log(event.error);
     };
 
     reader.readAsDataURL(file);
