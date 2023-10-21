@@ -414,7 +414,7 @@
 
     <table>
       <tr>
-        <th colspan="2" class="label"><strong>Profile Picture:<sup class="required-sign">*</sup>:</strong></th>
+        <th colspan="2" class="label"><strong>Profile Picture<sup class="required-sign">*</sup>:</strong></th>
         <td colspan="2"><img class="profilePicPreview" id="profilePicPreview" data-target="#profpic" /></td>
       </tr>
       <tr>
