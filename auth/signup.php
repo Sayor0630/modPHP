@@ -54,7 +54,7 @@
         </div>
         <div class="step">
           <p>
-            Review
+            Preview
           </p>
           <div class="bullet">
             <span>4</span>
@@ -408,7 +408,7 @@
 <div class="page">
   <div class="preview">
     <div class="title">
-      Review your Selections:
+      Preview your Selections:
     </div>
     <!-- Add a preview section for selected data -->
 
@@ -446,7 +446,7 @@
   <div class="field btns">
     <button class="prev-3 prev">Previous</button>
   </div>
-  <button class="btn" id="signup-btn" type="submit">
+  <button class="btn signup-btn" id="signup-btn" type="submit">
     <p>JOIN NOW</p>
   </button>
 </div>

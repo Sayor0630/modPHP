@@ -750,7 +750,7 @@ input:focus:hover {
   width: 50%;
   border-radius: inherit;
   transition: width 0.3s ease;
-  margin-left: -221px;
+  margin-left: -201px;
 }
 
 .pass-indicator#weak::before {
