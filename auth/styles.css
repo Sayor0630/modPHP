@@ -921,13 +921,13 @@ input:focus:hover {
 .collapsible:active {
   background: rgb(255 255 255 / 5%);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: 0.1s;
+  transition: none;
 }
 
 .collapsible.active:active:hover {
   background: rgb(255 255 255 / 5%);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: 0.1s;
+  transition: none;
 }
 
 .collapsible i::before {
