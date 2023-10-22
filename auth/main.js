@@ -1,3 +1,5 @@
+const div = document.querySelector('.login-card');
+
 function disableTabindex(div) {
   // Get all focusable elements inside the div
   const focusableElements = div.querySelectorAll('a, button, input, select, textarea');
@@ -7,10 +9,31 @@ function disableTabindex(div) {
 }
 
 // Get the div element that you want to disable tabindex for
-const div = document.querySelector('.login-form');
+
+div.addEventListener('keydown', function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+  }
+});
+
+// Recursively disable Enter for all child elements of the div
+function disableEnterForChildren(element) {
+  for (let child of element.children) {
+    disableEnterForChildren(child);
+  }
+
+  element.addEventListener('keydown', function (event) {
+    if (event.keyCode === 13) {
+      event.preventDefault();
+    }
+  });
+}
+
+disableTabindex(div);
+disableEnterForChildren(div);
 
 // Disable tabindex for all elements inside the div
-disableTabindex(div);
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const bars = document.querySelector("#bars"),

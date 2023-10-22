@@ -33,8 +33,8 @@ button {
 }
 
 .control {
-  /* -moz-appearance: none;
-  appearance: none; */
+  -moz-appearance: none;
+  appearance: none;
   border: 0;
   outline: none;
   width: 100%;
@@ -1344,12 +1344,14 @@ table tr td {
 .required-sign {
   color: red;
 }
+
 .password-container {
   position: relative;
 }
 
 .password-container input[type="password"] {
-  padding-right: 30px; /* Add space for the button */
+  padding-right: 30px;
+  /* Add space for the button */
 }
 
 .password-toggle::before {
@@ -1367,14 +1369,14 @@ table tr td {
 
 .password-toggle:hover::before {
   padding: 3px 3px 0px 3px;
-    background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 4px;
   color: #f9f9f9;
-  
+
 }
 
 .password-toggle:active::before {
@@ -1382,7 +1384,7 @@ table tr td {
   color: #ada5c7;
   border: 1px solid rgb(255 255 255 / 5%);
   transition: none;
-  
+
 }
 
 .password-toggle.show::before {
@@ -1391,6 +1393,75 @@ table tr td {
 }
 
 .password-toggle.hide::before {
-  content: url('./eye_hide.svg'); /* Replace '#icon-eye-hide' with the URL of your hide icon SVG */
+  content: url('./eye_hide.svg');
+  /* Replace '#icon-eye-hide' with the URL of your hide icon SVG */
   color: #f9f9f9;
+}
+
+.gender {
+  position: relative;
+}
+
+.gender::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-family: 'Font Awesome 5 Free';
+  font-weight: bold;
+  content: "\f107";
+  pointer-events: none;
+  color: #f9f9f9
+}
+
+.grade {
+  position: relative;
+}
+
+.grade::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-family: 'Font Awesome 5 Free';
+  font-weight: bold;
+  content: "\f107";
+  pointer-events: none;
+  color: #f9f9f9
+}
+
+.religion {
+  position: relative;
+}
+
+.religion::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-family: 'Font Awesome 5 Free';
+  font-weight: bold;
+  content: "\f107";
+  pointer-events: none;
+  color: #f9f9f9
+}
+
+.district {
+  position: relative;
+}
+
+.district::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-family: 'Font Awesome 5 Free';
+  font-weight: bold;
+  content: "\f107";
+  pointer-events: none;
+  color: #f9f9f9
 }
