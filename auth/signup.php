@@ -390,6 +390,8 @@
             <div id="bars">
               <div></div>
             </div>
+            <div id='pass-length-message' class="alert-message"></div>
+            <div id='pass-match-message' class="alert-message"></div>
             <div class="password-container">
               <input spellcheck="false" class="control" id="password" name="password" type="password" placeholder="Password" />
               <div class="password-toggle show" onclick="togglePassword('password')"></div>
@@ -399,9 +401,6 @@
               <input spellcheck="false" class="control" id="confirm-password" type="password" placeholder="Confirm Password" name="confirm_password" />
               <div class="password-toggle show" onclick="togglePassword('confirm-password')"></div>
             </div>
-
-            <div id='pass-length-message' class="alert-message"></div>
-            <div id='pass-match-message' class="alert-message"></div>
 
             <div class="field btns">
               <button class="prev-2 prev">Previous</button>
@@ -829,7 +828,7 @@
       max: 4,
       speed: 400,
       glare: true,
-      "max-glare": 0.2,
+      "max-glare": 0.1,
       scale: 1.0,
       gyroscope: true, // Boolean to enable/disable device orientation detection,
       gyroscopeMinAngleX: -45, // This is the bottom limit of the device angle on X axis, meaning that a device rotated at this angle would tilt the element as if the mouse was on the left border of the element;
