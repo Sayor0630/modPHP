@@ -754,12 +754,6 @@
           document.getElementById("previewReligion").textContent = religion;
           document.getElementById("previewDistrict").textContent = district;
           document.getElementById("previewEmail").textContent = email;
-
-          // // Update the profile picture preview
-          // const profilePic = document.getElementById("profpic");
-          // const profilePicPreview = document.getElementById("profilePicPreview");
-          // const profilePicSrc = profilePic.querySelector("img").src;
-          // profilePicPreview.src = profilePicSrc;
         }
 
         // Attach the updatePreview function to form inputs' change events
@@ -770,6 +764,32 @@
         document.getElementById("religion").addEventListener("change", updatePreview);
         document.getElementById("district").addEventListener("change", updatePreview);
         document.getElementById("email").addEventListener("input", updatePreview);
+
+        // Get references to the "JOIN NOW" button and all the "Next" buttons
+        const joinNowButton = document.getElementById("signup-btn");
+        const next1Button = document.getElementById("next-1");
+        const next2Button = document.getElementById("next-2");
+
+        // Function to update the state of the "JOIN NOW" button
+        function updateJoinNowButtonState() {
+          const isFirstNextEnabled = !firstNextButton.disabled;
+          const isNext1Enabled = !next1Button.disabled;
+          const isNext2Enabled = !next2Button.disabled;
+
+          if (isFirstNextEnabled && isNext1Enabled && isNext2Enabled) {
+            joinNowButton.disabled = false;
+          } else {
+            joinNowButton.disabled = true;
+          }
+        }
+
+        // Add event listeners to the "Next" buttons to update the state of the "JOIN NOW" button
+        firstNextButton.addEventListener("click", updateJoinNowButtonState);
+        next1Button.addEventListener("click", updateJoinNowButtonState);
+        next2Button.addEventListener("click", updateJoinNowButtonState);
+
+        // Initial check when the page loads
+        updateJoinNowButtonState();
       </script>
 
 
@@ -803,7 +823,6 @@
     }
 
     // Get the next2Button and prev2Button buttons
-    var next2Button = document.querySelector('#next-2');
     var prev2Button = document.querySelector('.prev-2');
 
     // Add an event listener to the next2Button and prev2Button buttons
