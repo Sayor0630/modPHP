@@ -25,6 +25,10 @@ body {
   /* animation: rotate 5s infinite alternate linear; */
 }
 
+.hero-card {
+  display: flex;
+}
+
 button {
   background: transparent;
   border: 0;
@@ -1458,4 +1462,8 @@ table tr td {
   content: "\f107";
   pointer-events: none;
   color: #f9f9f9
+}
+
+.signup-card {
+  display: none;
 }
