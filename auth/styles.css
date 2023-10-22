@@ -1064,7 +1064,7 @@ form .page .field .prev {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
-  border-botton: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 4px;
   color: #f9f9f9;
   cursor: pointer;
@@ -1094,7 +1094,7 @@ form .page .field .next {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.2);
   border-right: 1px solid rgba(255, 255, 255, 0.2);
-  border-botton: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 4px;
   color: #f9f9f9;
   cursor: pointer;
@@ -1343,4 +1343,54 @@ table tr td {
 
 .required-sign {
   color: red;
+}
+.password-container {
+  position: relative;
+}
+
+.password-container input[type="password"] {
+  padding-right: 30px; /* Add space for the button */
+}
+
+.password-toggle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  border: 1px solid rgb(255 255 255 / 0%);
+  border-radius: 4px;
+  padding: 3px 3px 0px 3px;
+  transition: 0.1s ease;
+}
+
+.password-toggle:hover::before {
+  padding: 3px 3px 0px 3px;
+    background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: #f9f9f9;
+  
+}
+
+.password-toggle:active::before {
+  background: rgb(255 255 255 / 5%);
+  color: #ada5c7;
+  border: 1px solid rgb(255 255 255 / 5%);
+  transition: none;
+  
+}
+
+.password-toggle.show::before {
+  content: url('./eye_show.svg');
+  color: #f9f9f9;
+}
+
+.password-toggle.hide::before {
+  content: url('./eye_hide.svg'); /* Replace '#icon-eye-hide' with the URL of your hide icon SVG */
+  color: #f9f9f9;
 }

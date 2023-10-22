@@ -18,14 +18,14 @@
 
 <body>
 
-<!-- <nav>
+<nav>
     <div class="logo">
       <img src=".././img/logo/logo.png" alt="Logo">
     </div>
     <div class="signin">
       <a href=".././index.php">Home</a></li>
     </div>
-  </nav> -->
+  </nav>
 
   <div class="hero-T">
     <div class="login-card">
@@ -390,10 +390,18 @@
             <div id="bars">
               <div></div>
             </div>
-            <input spellcheck="false" class="control" id="password" name="password" type="password" placeholder="Password" />
-            <input spellcheck="false" class="control" id="confirm-password" type="password" placeholder="Confirm Password" name="confirm_password" />
-            <div id='pass-length-message' class="alert-message "></div>
-            <div id='pass-match-message' class="alert-message "></div>
+            <div class="password-container">
+  <input spellcheck="false" class="control" id="password" name="password" type="password" placeholder="Password" />
+  <div class="password-toggle show" onclick="togglePassword('password')"></div>
+</div>
+
+<div class="password-container">
+  <input spellcheck="false" class="control" id="confirm-password" type="password" placeholder="Confirm Password" name="confirm_password" />
+  <div class="password-toggle show" onclick="togglePassword('confirm-password')"></div>
+</div>
+
+<div id='pass-length-message' class="alert-message"></div>
+<div id='pass-match-message' class="alert-message"></div>
 
             <div class="field btns">
               <button class="prev-2 prev">Previous</button>
@@ -776,6 +784,7 @@
   <!-- ==================================================================================== -->
 
   <script type="text/javascript" src="./main.js"></script>
+  <script src="../js/see-pass-two.js"></script>
   <script type="text/javascript" src=".././js/vanilla-tilt.js"></script>
   <script>
     // Get the collapsible elements
