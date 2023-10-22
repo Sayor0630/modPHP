@@ -1139,7 +1139,7 @@ form .page .btns button.next {
 
 .progress-bar {
   display: flex;
-  margin: 40px 0;
+  margin: 30px 0;
   -webkit-user-select: none;
   user-select: none;
 }
