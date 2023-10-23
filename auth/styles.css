@@ -1,15 +1,10 @@
 :root {
-  --primary-color: #4EA685;
-  --secondary-color: #57B894;
+  --primary-color: #B177FF;
+  --secondary-color: #2c1265;
   --black: #000000;
-  --white: #ffffff;
-  --gray: #efefef;
-  --gray-2: #757575;
-
-  --facebook-color: #4267B2;
-  --google-color: #DB4437;
-  --twitter-color: #1DA1F2;
-  --insta-color: #E1306C;
+  --white: #F9F9F9;
+  --gray: #F3F3F3;
+  --gray-2: #837F90;
 }
 
 
@@ -22,8 +17,14 @@
 
 html,
 body {
+  
   height: 100vh;
   overflow: hidden;
+  background: #333c47;
+  color: var(--font-color);
+  height:100%;
+  width:100%;
+  margin:0;
 }
 
 .row {
@@ -47,7 +48,7 @@ body {
 .form {
   transform: scale(0);
   transition: .5s ease-in-out;
-  transition-delay: 1s;
+  transition-delay: 0.75s;
 }
 
 
@@ -110,7 +111,7 @@ body {
   height: 100vh;
   width: 300vw;
   transform: translate(35%, 0);
-  background-image: linear-gradient(-45deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  background-image: linear-gradient(0deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   transition: 1s ease-in-out;
   z-index: 6;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -131,6 +132,10 @@ body {
 /* RESPONSIVE */
 
 @media only screen and (max-width: 425px) {
+
+    .vanilla-tilt-element {
+    transform: none !important;
+  }
 
   .container::before,
   .container.sign-in::before,
@@ -185,6 +190,7 @@ body {
 
   .text {
       margin: 0;
+    display: none
   }
 
 
@@ -193,25 +199,20 @@ body {
       margin: .5rem;
       font-size: 2rem;
   }
+
+  .progress-bar {
+    display: none !important;
+  }
+
+  .login-card {
+  width: 98vw !important;
+    height: 95vh !important
+
+}
 }
 
 
 
-.hero-card {
-  display: flex;
-}
-
-.signin-card {
-  top: 20vh;
-  left: 10vw;
-  position: absolute;
-}
-
-.signup-card {
-  top: 10vh;
-  right: 10vw;
-  position: absolute;
-}
 
 button {
   background: transparent;
