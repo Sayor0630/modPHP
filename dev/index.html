@@ -1,34 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Signup 2</title>
-  <link rel="stylesheet" href=".././css/nav.css">
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href=".././css/footer.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css" integrity="sha512-Z0kTB03S7BU+JFU0nw9mjSBcRnZm2Bvm0tzOX9/OuOuz01XQfOpa0w/N9u6Jf2f1OAdegdIPWZ9nIZZ+keEvBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.3/dist/full.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script> -->
-
-  <link rel="stylesheet" href=".././css/theme.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-
-  <!-- <nav>
-    <div class="logo">
-      <img src=".././img/logo/logo.png" alt="Logo">
-    </div>
-    <div class="signin">
-      <a href=".././index.php">Home</a></li>
-    </div>
-  </nav> -->
-  <!--  -->
-
-  <div id="container" class="container">
+    <div id="container" class="container">
 		<!-- FORM SECTION -->
 		<div class="row">
 			<!-- SIGN UP -->
@@ -879,13 +859,10 @@
 		</div>
 		<!-- END CONTENT SECTION -->
 	</div>
-  <!-- ==================================================================================== -->
+</body>
 
-  <script type="text/javascript" src="./main.js"></script>
-  <script src="../js/see-pass-two.js"></script>
-  <script type="text/javascript" src=".././js/vanilla-tilt.js"></script>
-  <script>
-        let container = document.getElementById('container')
+<script>
+    let container = document.getElementById('container')
 
 toggle = () => {
 	container.classList.toggle('sign-in')
@@ -895,56 +872,5 @@ toggle = () => {
 setTimeout(() => {
 	container.classList.add('sign-in')
 }, 200)
-    // Get the collapsible elements
-    var coll = document.querySelectorAll('.collapsible');
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-        } else {
-          content.style.maxHeight = content.scrollHeight + "px";
-        }
-      });
-    }
-
-    // Get the next2Button and prev2Button buttons
-    var prev2Button = document.querySelector('.prev-2');
-
-    // Add an event listener to the next2Button and prev2Button buttons
-    next2Button.addEventListener('click', function() {
-      // Hide the collapsible contents
-      for (var i = 0; i < coll.length; i++) {
-        var content = coll[i].nextElementSibling;
-        content.style.maxHeight = null;
-      }
-    });
-
-    prev2Button.addEventListener('click', function() {
-      // Hide the collapsible contents
-      for (var i = 0; i < coll.length; i++) {
-        var content = coll[i].nextElementSibling;
-        content.style.maxHeight = null;
-      }
-    });
-  </script>
-  <script>
-    VanillaTilt.init(document.querySelectorAll(".login-card"), {
-      max: 4,
-      speed: 400,
-      glare: true,
-      "max-glare": 0.1,
-      scale: 1.0,
-      gyroscope: true, // Boolean to enable/disable device orientation detection,
-      gyroscopeMinAngleX: -45, // This is the bottom limit of the device angle on X axis, meaning that a device rotated at this angle would tilt the element as if the mouse was on the left border of the element;
-      gyroscopeMaxAngleX: 45, // This is the top limit of the device angle on X axis, meaning that a device rotated at this angle would tilt the element as if the mouse was on the right border of the element;
-      gyroscopeMinAngleY: -45, // This is the bottom limit of the device angle on Y axis, meaning that a device rotated at this angle would tilt the element as if the mouse was on the top border of the element;
-      gyroscopeMaxAngleY: 45, // This is the top limit of the device angle on Y axis, meaning that a device rotated at this angle would tilt the element as if the mouse was on the bottom border of the element;
-    });
-  </script>
-</body>
-
+</script>
 </html>

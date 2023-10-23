@@ -310,20 +310,3 @@ image.addEventListener('click', function () {
 
 
 
-function toggleForm() {
-  var signinCard = document.querySelector('.signin-card');
-  var signupCard = document.querySelector('.signup-card');
-
-  if (signinCard.style.display === 'block') {
-      signinCard.style.display = 'none';
-      signupCard.style.display = 'block';
-  } else {
-      signinCard.style.display = 'block';
-      signupCard.style.display = 'none';
-  }
-}
-
-// Run the script when the page is fully loaded
-window.onload = function () {
-  toggleForm(); // Initially hide the signup-card
-};
