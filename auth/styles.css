@@ -17,14 +17,17 @@
 
 html,
 body {
-  
-  height: 100vh;
-  overflow: hidden;
   background: #333c47;
   color: var(--font-color);
-  height:100%;
-  width:100%;
-  margin:0;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .row {
@@ -44,6 +47,10 @@ body {
   text-align: center;
 }
 
+.form-wrapper {
+  max-width: 28rem;
+}
+
 
 .form {
   transform: scale(0);
@@ -59,7 +66,7 @@ body {
 }
 
 .container.sign-in .form.sign-in,
-.container.sign-up .form.sign-up{
+.container.sign-up .form.sign-up {
   transform: scale(1);
 }
 
@@ -88,11 +95,11 @@ body {
 
 
 
-.text.sign-in h2{
+.text.sign-in h2 {
   transform: translateX(-250%);
 }
 
-.text.sign-up h2{
+.text.sign-up h2 {
   transform: translateX(250%);
 }
 
@@ -129,87 +136,7 @@ body {
   right: 50%;
 }
 
-/* RESPONSIVE */
 
-@media only screen and (max-width: 425px) {
-
-    .vanilla-tilt-element {
-    transform: none !important;
-  }
-
-  .container::before,
-  .container.sign-in::before,
-  .container.sign-up::before {
-      height: 100vh;
-      border-bottom-right-radius: 0;
-      border-top-left-radius: 0;
-      z-index: 0;
-      transform: none;
-      right: 0;
-  }
-
-  /* .container.sign-in .col.sign-up {
-      transform: translateY(100%);
-  } */
-
-  .container.sign-in .col.sign-in,
-  .container.sign-up .col.sign-up {
-      transform: translateY(0);
-  }
-
-  .content-row {
-      align-items: flex-start !important;
-  }
-
-  .content-row .col {
-      transform: translateY(0);
-      background-color: unset;
-  }
-
-  .col {
-      width: 100%;
-      position: absolute;
-      padding: 2rem;
-      background-color: var(--white);
-      border-top-left-radius: 2rem;
-      border-top-right-radius: 2rem;
-      transform: translateY(100%);
-      transition: 1s ease-in-out;
-  }
-
-  .row {
-      align-items: flex-end;
-      justify-content: flex-end;
-  }
-
-  .form {
-      box-shadow: none;
-      margin: 0;
-      padding: 0;
-  }
-
-  .text {
-      margin: 0;
-    display: none
-  }
-
-
-
-  .text h2 {
-      margin: .5rem;
-      font-size: 2rem;
-  }
-
-  .progress-bar {
-    display: none !important;
-  }
-
-  .login-card {
-  width: 98vw !important;
-    height: 95vh !important
-
-}
-}
 
 
 
@@ -352,7 +279,7 @@ button {
   appearance: none;
 }
 
-.control.countryCode option {
+.control option {
   background: rgba(255, 255, 255, 0.5);
   /* Change the background color */
   padding: 5px 10px;
@@ -1500,6 +1427,10 @@ input[type="range"]:active::-moz-range-thumb {
   box-shadow: 0 0 0 13px rgba(255,85,0, .2)    
 } */
 
+table.mobile-table {
+  display: none;
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
@@ -1651,4 +1582,661 @@ table tr td {
 
 .signup-card {
   display: none;
+}
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1146px) {
+  .container.sign-in::before {
+    transform: translate(0, 0);
+    right: 55%;
+  }
+
+  .container.sign-up::before {
+    transform: translate(100%, 0);
+    right: 45%;
+  }
+
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    left: 38px;
+    width: 62px;
+  }
+
+  .login-card {
+    width: 500px;
+
+  }
+
+  .pass-indicator::before {
+    margin-left: -172px;
+  }
+
+  .options {
+    padding-bottom: 10px;
+    padding-left: 0;
+  }
+
+  .details .title,
+  .pass-settings .title {
+    font-size: 15px !important
+  }
+
+  .option label {
+    padding-left: 0;
+  }
+
+
+}
+
+@media only screen and (max-width: 940px) {
+
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    left: 38px;
+    width: 50px;
+  }
+
+  .login-card {
+    width: 450px;
+
+  }
+
+
+  .wrapper {
+    margin: 1rem 1.5rem;
+  }
+
+  .pass-indicator::before {
+    margin-left: -151px;
+  }
+
+  .options .option label {
+    font-size: 14px
+  }
+
+  table th,
+  table td {
+    font-size: 12px;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  .progress-bar {
+    font-size: 0px
+  }
+
+  .progress-bar .step p {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  .progress-bar .step .bullet {
+    height: 35px;
+    width: 35px;
+    font-size: 15px;
+  }
+
+
+
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    left: 36px;
+    width: 42px;
+  }
+
+  .login-card {
+    width: 350px;
+    padding: 30px 10px 30px;
+  }
+
+  .profpic {
+    padding: 5px 0 10px 0;
+  }
+
+
+
+  .wrapper {
+    margin: 1rem 1.5rem;
+  }
+
+  .pass-indicator::before {
+    margin-left: -125px;
+  }
+
+  .options .option label {
+    font-size: 11px
+  }
+
+  table th,
+  table td {
+    font-size: 12px;
+  }
+
+}
+
+
+@media only screen and (max-width: 560px) {
+
+
+  .container::before,
+  .container.sign-in::before,
+  .container.sign-up::before {
+    height: 100vh;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    z-index: 0;
+    transform: none;
+    right: 0;
+  }
+
+  /* .container.sign-in .col.sign-up {
+      transform: translateY(100%);
+  } */
+
+  .container.sign-in .col.sign-in,
+  .container.sign-up .col.sign-up {
+    transform: translateY(0);
+  }
+
+  .content-row {
+    align-items: flex-start !important;
+  }
+
+  .content-row .col {
+    transform: translateY(0);
+    background-color: unset;
+  }
+
+  .col {
+    width: 100%;
+    position: absolute;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+    background-color: #333c47;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    transform: translateY(100%);
+    transition: 1s ease-in-out;
+  }
+
+  .col.sign-in {
+    width: 100%;
+    position: absolute;
+    padding-top: 1rem;
+    padding-bottom: 10rem;
+    background-color: #333c47;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    transform: translateY(100%);
+    transition: 1s ease-in-out;
+  }
+
+
+
+
+
+  .row {
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .form {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .text {
+    margin: 0;
+
+  }
+
+
+
+  .text h2 {
+    margin: .5rem;
+    font-size: 2rem;
+  }
+
+
+  .progress-bar .step p {
+    font-size: 18px;
+  }
+
+  .progress-bar .step .bullet {
+    height: 35px;
+    width: 35px;
+    font-size: 15px;
+  }
+
+
+
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    left: 40px;
+    width: 12vw;
+  }
+
+
+
+  .login-card {
+    padding: 20px 15px 30px;
+    width: 90vw;
+  }
+
+  .wrapper {
+    margin: 1.0rem 2.0rem;
+  }
+
+  .pass-indicator::before {
+    margin-left: -190px;
+  }
+
+
+  .options .option label {
+    font-size: 17px
+  }
+
+  table th,
+  table td {
+    font-size: 15px;
+  }
+
+
+}
+
+@media only screen and (max-width: 470px) {
+
+
+  .container::before,
+  .container.sign-in::before,
+  .container.sign-up::before {
+    height: 100vh;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    z-index: 0;
+    transform: none;
+    right: 0;
+  }
+
+  /* .container.sign-in .col.sign-up {
+      transform: translateY(100%);
+  } */
+
+  .container.sign-in .col.sign-in,
+  .container.sign-up .col.sign-up {
+    transform: translateY(0);
+  }
+
+  .content-row {
+    align-items: flex-start !important;
+  }
+
+  .content-row .col {
+    transform: translateY(0);
+    background-color: unset;
+  }
+
+  .col {
+    width: 100%;
+    position: absolute;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    background-color: #333c47;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    transform: translateY(100%);
+    transition: 1s ease-in-out;
+  }
+
+  .col.sign-in {
+    width: 100%;
+    position: absolute;
+    padding-top: 1rem;
+    padding-bottom: 10rem;
+    background-color: #333c47;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    transform: translateY(100%);
+    transition: 1s ease-in-out;
+  }
+
+
+
+
+
+  .row {
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .form {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .form-outer .page .title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .text {
+    margin: 0;
+
+  }
+
+
+
+  .text h2 {
+    margin: .5rem;
+    font-size: 2rem;
+  }
+
+
+  .progress-bar .step p {
+    font-size: 15px;
+  }
+
+  .progress-bar .step .bullet {
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+  }
+
+
+
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    left: 8vw;
+    width: 10vw;
+  }
+
+  .login-card {
+    padding: 30px 15px 30px;
+    width: 90vw;
+  }
+
+  .control {
+    height: 45px;
+    margin: 4px 0;
+  }
+
+  .login-card>h2 {
+    font-size: 26px;
+    margin: 0 0 6px;
+  }
+
+  .login-card>h3 {
+    margin-bottom: 5px !important;
+    font-size: 15px;
+  }
+
+  .mobileNumber {
+    margin-left: 5px;
+    flex-grow: 1;
+  }
+
+
+  .collapsible {
+    display: none;
+  }
+
+  .form-outer form .page .field {
+    margin: 10px 0;
+    display: unset;
+    position: relative;
+  }
+
+  form .page .btns button.prev {
+    height: 45px;
+    margin-top: 5px;
+    margin-right: 0;
+  }
+
+  form .page .btns button.next {
+    height: 45px;
+    margin-top: 5px;
+    margin-left: 0;
+  }
+
+  table.desktop-table {
+    display: none;
+  }
+
+  table.mobile-table {
+    display: unset;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+
+  }
+
+  .profilePicPreview {
+    height: 70px !important;
+    width: 70px !important;
+    padding-bottom: 0;
+  }
+
+
+  table th,
+  table td {
+    font-size: 13px;
+  }
+
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    padding-left: 1vw;
+
+  }
+
+  table tr th {
+    text-align: left;
+    color: #F9F9F9;
+    width: 100px;
+    padding: 0px;
+    padding-bottom: 2px;
+  }
+
+  table tr td {
+    padding: 0px;
+    padding-bottom: 2px;
+    width: 500px;
+  }
+
+}
+
+
+@media only screen and (max-width: 375px) {
+  .col {
+    padding-bottom: 1rem;
+  }
+
+  .text {
+    display: none;
+  }
+
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    left: 8vw;
+    width: 11vw;
+  }
+
+  .control {
+    height: 42px
+  }
+
+
+  .login-card img {
+    width: 110px;
+    height: 110px;
+  }
+
+  form .page .btns button.prev {
+    height: 42px;
+  }
+
+  form .page .btns button.next {
+    height: 42px;
+  }
+}
+
+
+@media only screen and (max-width: 300px) {
+
+
+
+  .container::before,
+  .container.sign-in::before,
+  .container.sign-up::before {
+    height: 100vh;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    z-index: 0;
+    transform: none;
+    right: 0;
+  }
+
+  /* .container.sign-in .col.sign-up {
+      transform: translateY(100%);
+  } */
+
+  .container.sign-in .col.sign-in,
+  .container.sign-up .col.sign-up {
+    transform: translateY(0);
+  }
+
+  .content-row {
+    align-items: flex-start !important;
+  }
+
+  .content-row .col {
+    transform: translateY(0);
+    background-color: unset;
+  }
+
+  .col {
+    width: 100%;
+    position: absolute;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+    background-color: #333c47;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    transform: translateY(100%);
+    transition: 1s ease-in-out;
+  }
+
+  .col.sign-in {
+    width: 100%;
+    position: absolute;
+    padding-top: 1rem;
+    padding-bottom: 10rem;
+    background-color: #333c47;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    transform: translateY(100%);
+    transition: 1s ease-in-out;
+  }
+
+
+
+
+
+  .row {
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .form {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .text {
+    margin: 0;
+
+  }
+
+
+
+  .text h2 {
+    margin: .5rem;
+    font-size: 2rem;
+  }
+
+  .progress-bar {
+    display: none;
+  }
+
+  .login-card {
+    padding: 20px 15px 30px;
+    width: 98vw;
+    max-height: 95vh;
+  }
+
+  .login-card>h2 {
+    display: none;
+  }
+
+  .collapsible {
+    display: none
+  }
+
+
+  .countryCode {
+    width: 105px;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .control.countryCode {
+    padding: 0 5px;
+  }
+
+
+  table {
+    border-collapse: collapse;
+    width: 0 !important;
+    font-size: 13px
+  }
+
+
+  table tr td {
+    padding: 4px;
+    text-align: left;
+    max-width: 10px !important;
+  }
+
+  .profilePicPreview {
+    height: 70px !important;
+    width: 70px !important;
+  }
+
+
+  .form-outer form .page .field {
+    margin: 10px 0;
+    display: unset;
+    position: relative;
+  }
+
+  form .page .btns button.prev {
+    margin-right: 0;
+  }
+
+  form .page .btns button.next {
+    margin-top: 5px;
+    margin-left: 0;
+  }
+
+
 }

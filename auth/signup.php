@@ -423,7 +423,7 @@
                       </div>
                       <!-- Add a preview section for selected data -->
 
-                      <table>
+                      <table class="desktop-table">
                         <tr>
                           <th colspan="2" class="label"><strong>Profile Picture:</strong></th>
                           <td colspan="2"><img class="profilePicPreview" id="profilePicPreview" data-target="#profpic" /></td>
@@ -449,6 +449,41 @@
                         <tr>
                           <th class="label"><strong>Email:</strong></td>
                           <td colspan="6"> <span class="preview-text" id="previewEmail"></span></td>
+                        </tr>
+                      </table>
+
+                      <table class="mobile-table">
+                        <tr>
+                          <th class="label"><strong>Profile Picture:</strong></th>
+                          <td><img class="profilePicPreview" id="profilePicPreview1" data-target="#profpic" /></td>
+                        </tr>
+                        <tr>
+                          <th class="label"><strong>Username<sup class="required-sign">*</sup>:</strong></td>
+                          <td> <span class="preview-text" id="previewUsername1"></span></td>
+                        </tr>
+                        <tr>
+                          <th class="label"><strong>Mobile<sup class="required-sign">*</sup>:</strong></td>
+                          <td> <span class="preview-text" id="previewMobileNumber1"></span></td>
+                        </tr>
+                        <tr>
+                          <th class="label"><strong>Grade<sup class="required-sign">*</sup>:</strong></td>
+                          <td> <span class="preview-text" id="previewGrade1"></span></td>
+                        </tr>
+                        <tr>
+                          <th class="label"><strong>Gender<sup class="required-sign">*</sup>:</strong></td>
+                          <td> <span class="preview-text" id="previewGender1"></span></td>
+                        </tr>
+                        <tr>
+                          <th class="label"><strong>Religion<sup class="required-sign">*</sup>:</strong></td>
+                          <td> <span class="preview-text" id="previewReligion1"></span></td>
+                        </tr>
+                        <tr>
+                          <th class="label"><strong>District<sup class="required-sign">*</sup>:</strong></td>
+                          <td> <span class="preview-text" id="previewDistrict1"></span></td>
+                        </tr>
+                        <tr>
+                          <th class="label"><strong>Email:</strong></td>
+                          <td> <span class="preview-text" id="previewEmail1"></span></td>
                         </tr>
                       </table>
 
@@ -773,6 +808,41 @@
                 document.getElementById("district").addEventListener("change", updatePreview);
                 document.getElementById("email").addEventListener("input", updatePreview);
 
+
+
+                function updatePreview1() {
+                  const username = document.getElementById("name").value;
+                  const countryCode = document.getElementById("countryCode").value;
+                  const mobileNumber = countryCode + document.getElementById("mobile_number").value;
+                  const genderSelect = document.getElementById("gender");
+                  const gender = genderSelect.options[genderSelect.selectedIndex].text;
+                  const gradeSelect = document.getElementById("grade");
+                  const grade = gradeSelect.options[gradeSelect.selectedIndex].text;
+                  const religionSelect = document.getElementById("religion");
+                  const religion = religionSelect.options[religionSelect.selectedIndex].text;
+                  const districtSelect = document.getElementById("district");
+                  const district = districtSelect.options[districtSelect.selectedIndex].text;
+                  const email = document.getElementById("email").value;
+
+                  document.getElementById("previewUsername1").textContent = username;
+                  document.getElementById("previewMobileNumber1").textContent = mobileNumber;
+                  document.getElementById("previewGender1").textContent = gender;
+                  document.getElementById("previewGrade1").textContent = grade;
+                  document.getElementById("previewReligion1").textContent = religion;
+                  document.getElementById("previewDistrict1").textContent = district;
+                  document.getElementById("previewEmail1").textContent = email;
+                }
+
+                // Attach the updatePreview function to form inputs' change events
+                document.getElementById("name").addEventListener("input", updatePreview1);
+                document.getElementById("mobile_number").addEventListener("input", updatePreview1);
+                document.getElementById("gender").addEventListener("change", updatePreview1); // Use change event for select elements
+                document.getElementById("grade").addEventListener("change", updatePreview1);
+                document.getElementById("religion").addEventListener("change", updatePreview1);
+                document.getElementById("district").addEventListener("change", updatePreview1);
+                document.getElementById("email").addEventListener("input", updatePreview1);
+
+
                 // Get references to the "JOIN NOW" button and all the "Next" buttons
                 const joinNowButton = document.getElementById("signup-btn");
                 const next1Button = document.getElementById("next-1");
@@ -936,18 +1006,18 @@
     });
     let destroyBox = document.querySelectorAll(".login-card");
 
-// Get the device width
-const deviceWidth = window.innerWidth;
+    // Get the device width
+    const deviceWidth = window.innerWidth;
 
-// Disable vanilla tilt if device width is less than 400px
-if (deviceWidth < 400) {
-    VanillaTilt.init(destroyBox, {
+    // Disable vanilla tilt if device width is less than 400px
+    if (deviceWidth < 400) {
+      VanillaTilt.init(destroyBox, {
         mouse: false,
         touch: false
-    });
-} else {
-    VanillaTilt.init(destroyBox);
-}
+      });
+    } else {
+      VanillaTilt.init(destroyBox);
+    }
   </script>
 </body>
 

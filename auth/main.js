@@ -252,11 +252,13 @@ document.addEventListener("DOMContentLoaded", function () {
 // img handling
 const image = document.querySelector('#profpic img');
 const profilePicPreview = document.querySelector('#profilePicPreview');
+const profilePicPreview1 = document.querySelector('#profilePicPreview1');
 
 // Execute the code on page load.
 window.addEventListener('load', function () {
   // Load the image from the profpic div into the profilePicPreview image.
   profilePicPreview.src = image.src;
+  profilePicPreview1.src = image.src;
 });
 
 // Update the profile picture preview image when the user clicks on the image in the profpic div.
@@ -293,6 +295,7 @@ image.addEventListener('click', function () {
 
       // Update the profile picture preview image.
       profilePicPreview.src = reader.result;
+      profilePicPreview1.src = reader.result
     };
 
     reader.onerror = function (event) {
