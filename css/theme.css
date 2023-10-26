@@ -1,25 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Comfortaa:wght@300;400;500;600;700&display=swap');
-/* dark theme */
-:root{
-    --primary: #b4fcae;
-    --secondary: #a98fe0;
-    --accent: #ffaaa0;
-    --neutral: #29333d;
-    --base-100: #333c47;
-    --info: #31b1d8;
-    --success: #15b77b;
-    --warning: #f4d02f;
-    --error: #e11d48;
-
-
-    /* font */
-    --font-color: hsl(215, 6%, 83%);
-    --font-eng: 'Comfortaa', sans-serif;
-    --font-bang: 'Baloo Da 2', sans-serif;
-}
 
 /* light theme */
-:root{
+:root {
     --primary: #4f3ca3;
     --secondary: #9b4fd1;
     --accent: #d138b7;
@@ -31,8 +13,116 @@
     --error: #e11d48;
 
 
+    /* glassmorph */
+    --glass-bg: rgba(255, 255, 255, 0.25);
+    --glass-bg-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --glass-backdrop-filter: blur( 20px );
+    --glass-border: 2px solid rgba(0, 0, 0, 0.05);
+
+    --glass-hover-bg: rgba(255, 255, 255, 0.5);
+    --glass-hover-bg-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    --glass-hover-backdrop-filter: blur( 50px );
+
+    --glass-btn-bg: rgba(0, 0, 0, 0.2);
+    --glass-btn-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+
     /* font */
     --font-color: hsl(213, 1%, 18%);
     --font-eng: 'Comfortaa', sans-serif;
     --font-bang: 'Baloo Da 2', sans-serif;
+    --big-font: 3.8rem;
+    --h2-font: 2.6rem;
+    --p-font: 1.1rem;
+}
+
+
+.light-mode {
+    --primary: #4f3ca3;
+    --secondary: #9b4fd1;
+    --accent: #d138b7;
+    --neutral: #1f1727;
+    --base-100: #ebeff4;
+    --info: #7ab8dc;
+    --success: #24c278;
+    --warning: #f3952b;
+    --error: #e11d48;
+
+
+    /* glassmorph */
+    --glass-bg: rgba(255, 255, 255, 0.25);
+    --glass-bg-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --glass-backdrop-filter: blur( 20px );
+    --glass-border: 2px solid rgba(0, 0, 0, 0.05);
+
+    --glass-hover-bg: rgba(255, 255, 255, 0.5);
+    --glass-hover-bg-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    --glass-hover-backdrop-filter: blur( 50px );
+
+    --glass-btn-bg: rgba(0, 0, 0, 0.2);
+    --glass-btn-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+
+
+    /* font */
+    --font-color: hsl(213, 1%, 18%);
+    --font-eng: 'Comfortaa', sans-serif;
+    --font-bang: 'Baloo Da 2', sans-serif;
+}
+
+.dark-mode {
+    --primary: #b4fcae;
+    --secondary: #a98fe0;
+    --accent: brown;
+    --neutral: #e0e0e0;
+    --base-100: #333c47;
+    --info: #31b1d8;
+    --success: #15b77b;
+    --warning: #f4d02f;
+    --error: #e11d48;
+
+
+    /* glassmorph */
+    --glass-bg: rgba(0, 0, 0, 0.25);
+    --glass-bg-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --glass-backdrop-filter: blur( 20px );
+    --glass-border: 2px solid rgba( 255, 255, 255, 0.05 );
+
+    --glass-hover-bg: rgba(0, 0, 0, 0.5);
+    --glass-hover-bg-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    --glass-hover-backdrop-filter: blur( 50px );
+
+    --glass-btn-bg: rgba(255, 255, 255, 0.2);
+    --glass-btn-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+
+    /* font */
+    --font-color: hsl(215, 6%, 83%);
+    --font-eng: 'Comfortaa', sans-serif;
+    --font-bang: 'Baloo Da 2', sans-serif;
+}
+
+/* dark theme */
+
+.theme-toggle {
+    position: fixed;
+    background: var(--neutral);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 115px;
+    height: 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    bottom: 20px;
+    right: 20px;
+    -webkit-user-select: none;
+    user-select: none;
+    z-index: 1000000000001;
+}
+
+.theme-toggle i {
+    font-size: 20px;
+    margin-left: 10px;
 }
