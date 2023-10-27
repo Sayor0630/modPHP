@@ -253,7 +253,7 @@ header.sticky {
 
 .courses-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
   gap: 2rem;
   align-items: center;
   margin-top: 4rem;
@@ -337,6 +337,68 @@ header.sticky {
   font-size: var(--p-font);
   font-weight: 400;
   letter-spacing: 1px;
+}
+
+.cta {
+  padding: 70px 13%;
+}
+
+.cta-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, auto));
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.cta-content .cta-img img {
+  height: 90px;
+  width: 100%;
+}
+
+.about {
+  padding: 70px 13%;
+  background: url(../auth/bbblurry.svg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-img {
+  width: 100%;
+  height: auto;
+}
+
+.about-img img {
+  width: 450px;
+}
+
+.about-text h2 {
+  font-size: var(--h2-font);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: var(--p-font);
+  color: var(--neutral);
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+.about-text h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.about-text h5 {
+  font-size: 20px;
+  margin-bottom: 40px;
 }
 
 /* Slider */
