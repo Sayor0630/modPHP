@@ -2,12 +2,12 @@
 
 /* light theme */
 :root {
-    --primary: #4f3ca3;
+    --primary: #4338ca;
     --secondary: #9b4fd1;
-    --accent: #d138b7;
+    --accent: #0ea5e980;
     --neutral: #1f1727;
     --base-100: #e0e0e0;
-    --info: #7ab8dc;
+    --info: #51aadd;
     --success: #24c278;
     --warning: #f3952b;
     --error: #e11d48;
@@ -38,12 +38,12 @@
 
 
 .light-mode {
-    --primary: #4f3ca3;
+    --primary: #4338ca;
     --secondary: #9b4fd1;
-    --accent: #d138b7;
+    --accent: #0ea5e980;
     --neutral: #1f1727;
     --base-100: #e0e0e0;
-    --info: #7ab8dc;
+    --info: #51aadd;
     --success: #24c278;
     --warning: #f3952b;
     --error: #e11d48;
@@ -71,11 +71,11 @@
 }
 
 .dark-mode {
-    --primary: #b4fcae;
+    --primary: #818cf8;
     --secondary: #a98fe0;
-    --accent: brown;
+    --accent: #0ea5e9bf;
     --neutral: #e0e0e0;
-    --base-100: #333c47;
+    --base-100: #333333;
     --info: #31b1d8;
     --success: #15b77b;
     --warning: #f4d02f;
@@ -97,7 +97,7 @@
 
 
     /* font */
-    --font-color: hsl(215, 6%, 83%);
+    --font-color: #e0e0e0;
     --font-eng: 'Comfortaa', sans-serif;
     --font-bang: 'Baloo Da 2', sans-serif;
 }
