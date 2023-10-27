@@ -249,58 +249,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-const image = document.querySelector('#profpic img');
-const profilePicPreview = document.querySelector('#profilePicPreview');
-const profilePicPreview1 = document.querySelector('#profilePicPreview1');
+// const image = document.querySelector('#profpic img');
+// const profilePicPreview = document.querySelector('#profilePicPreview');
+// const profilePicPreview1 = document.querySelector('#profilePicPreview1');
 
-// Update the profile picture preview image when the user clicks on the image in the profpic div.
-image.addEventListener('click', function () {
-  // Create a new file input element.
-  const fileInput = document.createElement('input');
-  fileInput.type = 'file';
-  fileInput.accept = 'image/*';
+// // Update the profile picture preview image when the user clicks on the image in the profpic div.
+// image.addEventListener('click', function () {
+//   // Create a new file input element.
+//   const fileInput = document.createElement('input');
+//   fileInput.type = 'file';
+//   fileInput.accept = 'image/*';
 
-  // Listen for the user to select an image file.
-  fileInput.addEventListener('change', function () {
-    // Get the selected image file.
-    const file = fileInput.files[0];
+//   // Listen for the user to select an image file.
+//   fileInput.addEventListener('change', function () {
+//     // Get the selected image file.
+//     const file = fileInput.files[0];
 
-    // Validate the selected image file.
-    if (!file.type.match('image/*')) {
-      alert('Please select an image file.');
-      return;
-    }
+//     // Validate the selected image file.
+//     if (!file.type.match('image/*')) {
+//       alert('Please select an image file.');
+//       return;
+//     }
 
-    // Create a new FormData object.
-    const formData = new FormData();
-    formData.append('imageData', file);
+//     // Create a new FormData object.
+//     const formData = new FormData();
+//     formData.append('imageData', file);
 
-    // Make a POST request to the PHP script.
-    fetch('save_image.php', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-      // Handle the response from the PHP script.
-      if (data.success) {
-        // The image was saved successfully.
-        profilePicPreview.src = data.imageUrl;
-        profilePicPreview1.src = data.imageUrl;
-      } else {
-        // An error occurred while saving the image.
-        alert(data.error);
-      }
-    })
-    .catch(error => {
-      // Handle the error.
-      alert(error.message);
-    });
-  });
+//     // Make a POST request to the PHP script.
+//     fetch('save_image.php', {
+//       method: 'POST',
+//       body: formData
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//       // Handle the response from the PHP script.
+//       if (data.success) {
+//         // The image was saved successfully.
+//         profilePicPreview.src = data.imageUrl;
+//         profilePicPreview1.src = data.imageUrl;
+//       } else {
+//         // An error occurred while saving the image.
+//         alert(data.error);
+//       }
+//     })
+//     .catch(error => {
+//       // Handle the error.
+//       alert(error.message);
+//     });
+//   });
 
-  // Click the file input element to open the file selection dialog.
-  fileInput.click();
-});
+//   // Click the file input element to open the file selection dialog.
+//   fileInput.click();
+// });
 
 
 

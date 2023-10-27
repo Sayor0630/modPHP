@@ -9,6 +9,7 @@
   <link rel="stylesheet" href=".././css/footer.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
 
   <!-- <link rel="stylesheet" href=".././css/theme.css"> -->
@@ -84,7 +85,7 @@
                     </div>
                     <div class="profpic" id="profpic">
                       <label for="uploadImage">
-                        <img id="preview" src="" alt="" style="max-width: 300px; max-height: 300px; cursor: pointer;">
+                        <img id="preview" src="https://i.pinimg.com/originals/0a/5f/ea/0a5feae400fc816c4ca2aca8bd67a168.jpg" alt="" style="max-width: 300px; max-height: 300px; cursor: pointer;">
                       </label>
                       <!-- The label will trigger the file input when clicked -->
                       <input type="file" name="image" accept="image/*" id="uploadImage" style="display: none;">
@@ -869,6 +870,24 @@
 
                 // Initial check when the page loads
                 updateJoinNowButtonState();
+
+                const uploadImage = document.getElementById('uploadImage');
+                const preview = document.getElementById('preview');
+                const profilePicPreview = document.querySelector('#profilePicPreview');
+                const profilePicPreview1 = document.querySelector('#profilePicPreview1');
+
+                uploadImage.addEventListener('change', (event) => {
+                  const file = event.target.files[0];
+                  if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                      preview.src = e.target.result;
+                      profilePicPreview.src = e.target.result;
+                      profilePicPreview1.src = e.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                  }
+                });
               </script>
 
 

@@ -1752,7 +1752,7 @@ table tr td {
     position: absolute;
     padding-top: 1rem;
     padding-bottom: 5rem;
-    background-color: #333c47;
+    background-color: var(--base-100);;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     transform: translateY(100%);
@@ -1764,7 +1764,7 @@ table tr td {
     position: absolute;
     padding-top: 1rem;
     padding-bottom: 10rem;
-    background-color: #333c47;
+    background-color: var(--base-100);;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     transform: translateY(100%);
@@ -1882,7 +1882,7 @@ table tr td {
     position: absolute;
     padding-top: 1rem;
     padding-bottom: 3rem;
-    background-color: #333c47;
+    background-color: var(--base-100);;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     transform: translateY(100%);
@@ -1894,7 +1894,7 @@ table tr td {
     position: absolute;
     padding-top: 1rem;
     padding-bottom: 10rem;
-    background-color: #333c47;
+    background-color: var(--base-100);;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     transform: translateY(100%);
@@ -2124,7 +2124,7 @@ table tr td {
     position: absolute;
     padding-top: 1rem;
     padding-bottom: 5rem;
-    background-color: #333c47;
+    background-color: var(--base-100);
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     transform: translateY(100%);
@@ -2136,7 +2136,7 @@ table tr td {
     position: absolute;
     padding-top: 1rem;
     padding-bottom: 10rem;
-    background-color: #333c47;
+    background-color: var(--base-100);
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     transform: translateY(100%);
