@@ -77,7 +77,7 @@
               </div>
 
               <div class="form-outer">
-                <form class="login-form" action="sign-in.php" method="post">
+                <form class="login-form">
                   <div class="page slide-page">
                     <div class="title">
                       Give your Basic Info:
@@ -493,7 +493,7 @@
                     <div class="field btns">
                       <button class="prev-3 prev">Previous</button>
                     </div>
-                    <button class="btn signup-btn" id="signup-btn" type="submit" name="sign-in">
+                    <button class="btn signup-btn" id="signup-btn">
                       <p>JOIN NOW</p>
                     </button>
                   </div>
@@ -890,7 +890,7 @@
               <img src="https://i.pinimg.com/originals/0a/5f/ea/0a5feae400fc816c4ca2aca8bd67a168.jpg" />
               <h2>Sign In</h2>
               <h3>Enter your credentials</h3>
-              <form class="login-form" action="login.php" method="post">
+              <form class="login-form">
                 <div class="email">
                   <input autocomplete="off" spellcheck="false" class="control" type="email" name="email" placeholder="Email or Phone Number" name="credentials" />
                   <div id="spinner" class="spinner"></div>
@@ -899,7 +899,7 @@
                 <div id="bars-1">
                   <div></div>
                 </div>
-                <button class="btn signin-btn" id="signin-btn" " name=" login">
+                <button class="btn signin-btn" id="signin-btn">
                   <p>Login</p>
                 </button>
                 <h5>Do not have an account?<b onclick="toggle()" class="pointer">Sign up here</b></h5>
