@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,10 +19,10 @@
 
 <body>
 
-      <div class="theme-toggle" id="theme-btn">
-        <span id="themebtnText">Dark</span>
-        <div id="themebtnIcon"></div>
-      </div>
+  <div class="theme-toggle" id="theme-btn">
+    <span id="themebtnText">Dark</span>
+    <div id="themebtnIcon"></div>
+  </div>
   <!--  -->
 
   <div id="container" class="container">
@@ -83,10 +82,13 @@
                     <div class="title">
                       Give your Basic Info:
                     </div>
-                    <div class="profpic" id="profpic" >
-                    <input type="file" name="image" accept="image/*">
-                    <input type="submit" value="Upload Image">
-                      <p>Select your Profile Picture</p>
+                    <div class="profpic" id="profpic">
+                      <label for="uploadImage">
+                        <img id="preview" src="" alt="Image Preview" style="max-width: 300px; max-height: 300px; cursor: pointer;">
+                      </label>
+                      <!-- The label will trigger the file input when clicked -->
+                      <input type="file" name="image" accept="image/*" id="uploadImage" style="display: none;">
+                      <input type="submit" value="Upload" style="display: none;">
                       <div id='profpic-message' class="alert-message"></div>
                     </div>
                     <div class="username">
@@ -896,8 +898,7 @@
                 <div id="bars-1">
                   <div></div>
                 </div>
-                <button class="btn signin-btn" id="signin-btn" 
-                " name="login">
+                <button class="btn signin-btn" id="signin-btn" " name=" login">
                   <p>Login</p>
                 </button>
                 <h5>Do not have an account?<b onclick="toggle()" class="pointer">Sign up here</b></h5>
