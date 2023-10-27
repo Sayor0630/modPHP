@@ -14,7 +14,7 @@
 <body>
 
   <!-- Navigation Bar -->
-  <nav>
+  <nav> 
     <div class="logo">
       <img src="./img/logo/logo.png" alt="Logo">
     </div>
