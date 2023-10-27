@@ -1,3 +1,122 @@
+<!-- <?php
+
+// Connect to the database
+$db = new PDO('mysql:host=localhost;dbname=mod000Auth', 'root', '');
+
+// Start a session
+session_start();
+
+// Check if the user is already logged in
+if (isset($_SESSION['logged_in'])) {
+    // Redirect the user to the home page
+    header('Location: index.php');
+    exit();
+}
+
+// Process the sign-in form
+if (isset($_POST['sign-in'])) {
+    // Validate the sign-in form data
+    $errors = [];
+    if (empty($_POST['username'])) {
+        $errors[] = 'Username is required.';
+    }
+    if (empty($_POST['password'])) {
+        $errors[] = 'Password is required.';
+    }
+
+    // If there are no errors, try to log the user in
+    if (empty($errors)) {
+        // Get the user's credentials from the database
+        $sql = 'SELECT * FROM users WHERE username = :username';
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(':username', $_POST['username']);
+        $stmt->execute();
+        $user = $stmt->fetch();
+
+        // If the user is not found, display an error message
+        if (!$user) {
+            $errors[] = 'Invalid username or password.';
+        }
+
+        // If the user is found, verify their password
+        else {
+            if (!password_verify($_POST['password'], $user['password'])) {
+                $errors[] = 'Invalid username or password.';
+            }
+
+            // If the password is valid, log the user in
+            else {
+                $_SESSION['logged_in'] = true;
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['username'] = $user['username'];
+
+                // Redirect the user to the home page
+                header('Location: index.php');
+                exit();
+            }
+        }
+    }
+}
+
+// Process the login form
+if (isset($_POST['login'])) {
+    // Validate the login form data
+    $errors = [];
+    if (empty($_POST['email'])) {
+        $errors[] = 'Email is required.';
+    }
+    if (empty($_POST['password'])) {
+        $errors[] = 'Password is required.';
+    }
+
+    // If there are no errors, try to log the user in
+    if (empty($errors)) {
+        // Get the user's credentials from the database
+        $sql = 'SELECT * FROM users WHERE email = :email';
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(':email', $_POST['email']);
+        $stmt->execute();
+        $user = $stmt->fetch();
+
+        // If the user is not found, display an error message
+        if (!$user) {
+            $errors[] = 'Invalid email or password.';
+        }
+
+        // If the user is found, verify their password
+        else {
+            if (!password_verify($_POST['password'], $user['password'])) {
+                $errors[] = 'Invalid email or password.';
+            }
+
+            // If the password is valid, log the user in
+            else {
+                $_SESSION['logged_in'] = true;
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['email'] = $user['email'];
+
+                // Redirect the user to the home page
+                header('Location: index.php');
+                exit();
+            }
+        }
+    }
+}
+
+// Display any errors
+if (!empty($errors)) {
+    echo '<ul>';
+    foreach ($errors as $error) {
+        echo '<li>' . $error . '</li>';
+    }
+    echo '</ul>';
+}
+
+?>-->
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,26 +126,22 @@
   <link rel="stylesheet" href=".././css/nav.css">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href=".././css/footer.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css" integrity="sha512-Z0kTB03S7BU+JFU0nw9mjSBcRnZm2Bvm0tzOX9/OuOuz01XQfOpa0w/N9u6Jf2f1OAdegdIPWZ9nIZZ+keEvBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.3/dist/full.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script> -->
 
-  <link rel="stylesheet" href=".././css/theme.css">
+  <!-- <link rel="stylesheet" href=".././css/theme.css"> -->
+  <link rel="stylesheet" href="theme.css">
+  <script src="./theme.js" defer></script>
 
 </head>
 
 <body>
 
-  <!-- <nav>
-    <div class="logo">
-      <img src=".././img/logo/logo.png" alt="Logo">
-    </div>
-    <div class="signin">
-      <a href=".././index.php">Home</a></li>
-    </div>
-  </nav> -->
+      <div class="theme-toggle" id="theme-btn">
+        <span id="themebtnText">Dark</span>
+        <div id="themebtnIcon"></div>
+      </div>
   <!--  -->
 
   <div id="container" class="container">
@@ -81,13 +196,14 @@
               </div>
 
               <div class="form-outer">
-                <form class="login-form" action="process_signup.php" method="post">
+                <form class="login-form" action="sign-in.php" method="post">
                   <div class="page slide-page">
                     <div class="title">
                       Give your Basic Info:
                     </div>
-                    <div class="profpic" id="profpic">
-                      <img src="https://i.pinimg.com/originals/0a/5f/ea/0a5feae400fc816c4ca2aca8bd67a168.jpg" />
+                    <div class="profpic" id="profpic" >
+                    <input type="file" name="image" accept="image/*">
+                    <input type="submit" value="Upload Image">
                       <p>Select your Profile Picture</p>
                       <div id='profpic-message' class="alert-message"></div>
                     </div>
@@ -160,70 +276,70 @@
                       <div class="district-input">
                         <select name="district" id="district" class="control district">
                           <option value="">Select District</option>
-                          <option value="72">Bagerhat</option>
-                          <option value="73">Bandarban</option>
-                          <option value="74">Barguna</option>
-                          <option value="75">Barisal</option>
-                          <option value="76">Bhola</option>
-                          <option value="77">Bogra</option>
-                          <option value="78">Brahmanbaria</option>
-                          <option value="79">Chandpur</option>
-                          <option value="80">Chapainawabganj</option>
-                          <option value="81">Chittagong</option>
-                          <option value="82">Chuadanga</option>
-                          <option value="84">Cox's Bazar</option>
-                          <option value="83">Cumilla</option>
-                          <option value="85">Dhaka</option>
-                          <option value="86">Dinajpur</option>
-                          <option value="87">Faridpur</option>
-                          <option value="88">Feni</option>
-                          <option value="89">Gaibandha</option>
-                          <option value="90">Gazipur</option>
-                          <option value="91">Gopalganj</option>
-                          <option value="92">Habiganj</option>
-                          <option value="93">Jamalpur</option>
-                          <option value="94">Jessore</option>
-                          <option value="95">Jhalokathi</option>
-                          <option value="96">Jhenaidah</option>
-                          <option value="97">Joypurhat</option>
-                          <option value="98">Khagrachhari</option>
-                          <option value="99">Khulna</option>
-                          <option value="100">Kishoreganj</option>
-                          <option value="101">Kurigram</option>
-                          <option value="102">Kushtia</option>
-                          <option value="103">Lakshmipur</option>
-                          <option value="104">Lalmonirhat</option>
-                          <option value="105">Madaripur</option>
-                          <option value="106">Magura</option>
-                          <option value="107">Manikganj</option>
-                          <option value="108">Meherpur</option>
-                          <option value="109">Moulvibazar</option>
-                          <option value="110">Munshiganj</option>
-                          <option value="111">Mymensingh</option>
-                          <option value="112">Naogaon</option>
-                          <option value="113">Narail</option>
-                          <option value="114">Narayanganj</option>
-                          <option value="115">Narsingdi</option>
-                          <option value="116">Natore</option>
-                          <option value="117">Netrokona</option>
-                          <option value="118">Nilphamari</option>
-                          <option value="119">Noakhali</option>
-                          <option value="120">Pabna</option>
-                          <option value="121">Panchagarh</option>
-                          <option value="122">Patuakhali</option>
-                          <option value="123">Pirojpur</option>
-                          <option value="124">Rajbari</option>
-                          <option value="125">Rajshahi</option>
-                          <option value="126">Rangamati</option>
-                          <option value="127">Rangpur</option>
-                          <option value="128">Satkhira</option>
-                          <option value="129">Shariatpur</option>
-                          <option value="130">Sherpur</option>
-                          <option value="131">Sirajganj</option>
-                          <option value="132">Sunamganj</option>
-                          <option value="133">Sylhet</option>
-                          <option value="134">Tangail</option>
-                          <option value="135">Thakurgaon</option>
+                          <option value="bagerhat">Bagerhat</option>
+                          <option value="bandarban">Bandarban</option>
+                          <option value="barguna">Barguna</option>
+                          <option value="barisal">Barisal</option>
+                          <option value="bhola">Bhola</option>
+                          <option value="bogra">Bogra</option>
+                          <option value="brahmanbaria">Brahmanbaria</option>
+                          <option value="chandpur">Chandpur</option>
+                          <option value="chapainawabganj">Chapainawabganj</option>
+                          <option value="chittagong">Chittagong</option>
+                          <option value="chuadanga">Chuadanga</option>
+                          <option value="coxsBazar">Cox's Bazar</option>
+                          <option value="cumilla">Cumilla</option>
+                          <option value="dhaka">Dhaka</option>
+                          <option value="dinajpur">Dinajpur</option>
+                          <option value="faridpur">Faridpur</option>
+                          <option value="feni">Feni</option>
+                          <option value="gaibandha">Gaibandha</option>
+                          <option value="gazipur">Gazipur</option>
+                          <option value="gopalganj">Gopalganj</option>
+                          <option value="habiganj">Habiganj</option>
+                          <option value="jamalpur">Jamalpur</option>
+                          <option value="jessore">Jessore</option>
+                          <option value="jhalokathi">Jhalokathi</option>
+                          <option value="jhenaidah">Jhenaidah</option>
+                          <option value="joypurhat">Joypurhat</option>
+                          <option value="khagrachhari">Khagrachhari</option>
+                          <option value="khulna">Khulna</option>
+                          <option value="kishoreganj">Kishoreganj</option>
+                          <option value="kurigram">Kurigram</option>
+                          <option value="kushtia">Kushtia</option>
+                          <option value="lakshmipur">Lakshmipur</option>
+                          <option value="lalmonirhat">Lalmonirhat</option>
+                          <option value="madaripur">Madaripur</option>
+                          <option value="magura">Magura</option>
+                          <option value="manikganj">Manikganj</option>
+                          <option value="meherpur">Meherpur</option>
+                          <option value="moulvibazar">Moulvibazar</option>
+                          <option value="munshiganj">Munshiganj</option>
+                          <option value="mymensingh">Mymensingh</option>
+                          <option value="naogaon">Naogaon</option>
+                          <option value="narail">Narail</option>
+                          <option value="narayanganj">Narayanganj</option>
+                          <option value="narsingdi">Narsingdi</option>
+                          <option value="natore">Natore</option>
+                          <option value="netrokona">Netrokona</option>
+                          <option value="nilphamari">Nilphamari</option>
+                          <option value="noakhali">Noakhali</option>
+                          <option value="pabna">Pabna</option>
+                          <option value="panchagarh">Panchagarh</option>
+                          <option value="patuakhali">Patuakhali</option>
+                          <option value="pirojpur">Pirojpur</option>
+                          <option value="rajbari">Rajbari</option>
+                          <option value="rajshahi">Rajshahi</option>
+                          <option value="rangamati">Rangamati</option>
+                          <option value="rangpur">Rangpur</option>
+                          <option value="satkhira">Satkhira</option>
+                          <option value="shariatpur">Shariatpur</option>
+                          <option value="sherpur">Sherpur</option>
+                          <option value="sirajganj">Sirajganj</option>
+                          <option value="sunamganj">Sunamganj</option>
+                          <option value="sylhet">Sylhet</option>
+                          <option value="tangail">Tangail</option>
+                          <option value="thakurgaon">Thakurgaon</option>
                         </select>
                       </div>
                       <div id='district-message' class="alert-message"></div>
@@ -492,7 +608,7 @@
                     <div class="field btns">
                       <button class="prev-3 prev">Previous</button>
                     </div>
-                    <button class="btn signup-btn" id="signup-btn" type="submit">
+                    <button class="btn signup-btn" id="signup-btn" type="submit" name="sign-in">
                       <p>JOIN NOW</p>
                     </button>
                   </div>
@@ -889,16 +1005,17 @@
               <img src="https://i.pinimg.com/originals/0a/5f/ea/0a5feae400fc816c4ca2aca8bd67a168.jpg" />
               <h2>Sign In</h2>
               <h3>Enter your credentials</h3>
-              <form class="login-form">
+              <form class="login-form" action="login.php" method="post">
                 <div class="email">
-                  <input autocomplete="off" spellcheck="false" class="control" type="email" placeholder="Email or Phone Number" name="credentials" />
+                  <input autocomplete="off" spellcheck="false" class="control" type="email" name="email" placeholder="Email or Phone Number" name="credentials" />
                   <div id="spinner" class="spinner"></div>
                 </div>
-                <input spellcheck="false" class="control" id="password-1" type="password" placeholder="Password" onkeyup="handleChange()" />
+                <input spellcheck="false" class="control" id="password-1" type="password" name="password" placeholder="Password" onkeyup="handleChange()" />
                 <div id="bars-1">
                   <div></div>
                 </div>
-                <button class="btn signin-btn" id="signin-btn" type="submit">
+                <button class="btn signin-btn" id="signin-btn" 
+                " name="login">
                   <p>Login</p>
                 </button>
                 <h5>Do not have an account?<b onclick="toggle()" class="pointer">Sign up here</b></h5>

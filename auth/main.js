@@ -249,17 +249,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// img handling
 const image = document.querySelector('#profpic img');
 const profilePicPreview = document.querySelector('#profilePicPreview');
 const profilePicPreview1 = document.querySelector('#profilePicPreview1');
-
-// Execute the code on page load.
-window.addEventListener('load', function () {
-  // Load the image from the profpic div into the profilePicPreview image.
-  profilePicPreview.src = image.src;
-  profilePicPreview1.src = image.src;
-});
 
 // Update the profile picture preview image when the user clicks on the image in the profpic div.
 image.addEventListener('click', function () {
@@ -279,31 +271,31 @@ image.addEventListener('click', function () {
       return;
     }
 
-    // Create a new FileReader object.
-    const reader = new FileReader();
+    // Create a new FormData object.
+    const formData = new FormData();
+    formData.append('imageData', file);
 
-    // Add an event listener to track the progress of the image upload.
-    reader.addEventListener('progress', function (event) {
-      // Update the progress bar.
-      // ...
+    // Make a POST request to the PHP script.
+    fetch('save_image.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Handle the response from the PHP script.
+      if (data.success) {
+        // The image was saved successfully.
+        profilePicPreview.src = data.imageUrl;
+        profilePicPreview1.src = data.imageUrl;
+      } else {
+        // An error occurred while saving the image.
+        alert(data.error);
+      }
+    })
+    .catch(error => {
+      // Handle the error.
+      alert(error.message);
     });
-
-    // Read the selected image file.
-    reader.onload = function () {
-      // Set the src attribute of the image element to the data URL of the selected image file.
-      image.src = reader.result;
-
-      // Update the profile picture preview image.
-      profilePicPreview.src = reader.result;
-      profilePicPreview1.src = reader.result
-    };
-
-    reader.onerror = function (event) {
-      alert('An error occurred while uploading the image file.');
-      console.log(event.error);
-    };
-
-    reader.readAsDataURL(file);
   });
 
   // Click the file input element to open the file selection dialog.
