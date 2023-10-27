@@ -410,17 +410,25 @@ header.sticky {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
   gap: 2rem;
+  align-items: center;
 }
 
-.contact-content img {
+.footer-logo {
   height: auto;
   width: 160px;
   max-width: 100%;
   margin-bottom: 30px;
 }
 
+.contact-icons {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
 .contact-content li {
   margin-bottom: 18px;
+  align-items: center;
 }
 
 .contact-content li a {
@@ -444,6 +452,8 @@ header.sticky {
   font-weight: 500;
   letter-spacing: 1px;
 }
+
+
 /* Slider */
 .slider {
   width: 100%;
