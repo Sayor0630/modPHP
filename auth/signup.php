@@ -84,11 +84,12 @@
                     </div>
                     <div class="profpic" id="profpic">
                       <label for="uploadImage">
-                        <img id="preview" src="" alt="Image Preview" style="max-width: 300px; max-height: 300px; cursor: pointer;">
+                        <img id="preview" src="" alt="" style="max-width: 300px; max-height: 300px; cursor: pointer;">
                       </label>
                       <!-- The label will trigger the file input when clicked -->
                       <input type="file" name="image" accept="image/*" id="uploadImage" style="display: none;">
                       <input type="submit" value="Upload" style="display: none;">
+                      <p>Select your Profile Picture</p>
                       <div id='profpic-message' class="alert-message"></div>
                     </div>
                     <div class="username">
