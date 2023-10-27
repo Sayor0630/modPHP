@@ -1,4 +1,4 @@
-<!-- <?php
+ <?php
 
 // Connect to the database
 $db = new PDO('mysql:host=localhost;dbname=mod000Auth', 'root', '');
@@ -112,7 +112,7 @@ if (!empty($errors)) {
     echo '</ul>';
 }
 
-?>-->
+?>
 
 
 
