@@ -401,6 +401,49 @@ header.sticky {
   margin-bottom: 40px;
 }
 
+.contact {
+  padding: 60px 13%;
+  background: var(--base-100);
+}
+
+.main-contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  gap: 2rem;
+}
+
+.contact-content img {
+  height: auto;
+  width: 160px;
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+
+.contact-content li {
+  margin-bottom: 18px;
+}
+
+.contact-content li a {
+  display: block;
+  color: var(--font-color);
+  font-weight: 500;
+  font-size: 15px;
+  transition: all .40s ease;
+}
+
+.contact-content li a:hover {
+  transform: translateX(10px);
+  color: var(--primary);
+}
+
+.last-text p {
+  text-align: center;
+  padding: 18px;
+  color: var(--secondary);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
 /* Slider */
 .slider {
   width: 100%;
