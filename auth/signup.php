@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
   <!-- <link rel="stylesheet" href=".././css/theme.css"> -->
@@ -85,43 +86,14 @@
                     </div>
                     <div class="profpic" id="profpic">
                       <label for="uploadImage">
-
                         <img id="preview" src="https://i.pinimg.com/originals/0a/5f/ea/0a5feae400fc816c4ca2aca8bd67a168.jpg" alt="" style="max-width: 300px; max-height: 300px; cursor: pointer;">
-
                       </label>
                       <!-- The label will trigger the file input when clicked -->
                       <input type="file" name="imageUser" accept="image/*" id="uploadImage" style="display: none;">
                       <input type="submit" value="Upload" style="display: none;">
                       <p>Select your Profile Picture</p>
                       <div id='profpic-message' class="alert-message"></div>
-                  </div>
-
-
-
-                  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#uploadForm").on('submit', function (e) {
-                e.preventDefault();
-                var formData = new FormData(this);
-                $.ajax({
-                    type: 'POST',
-                    url: 'upload.php',
-                    data: formData,
-                    processData: false,
-                    contentType: false,
-                    success: function (response) {
-                        $("#profpic-message").html(response);
-                    }
-                });
-            });
-        });
-    </script>
-
-
-
-
-
+                    </div>
                     <div class="username">
                       <input autocomplete="off" spellcheck="false" class="control" type="text" id="name" name="fullNameUser" placeholder="Username" />
                       <div id="spinner" class="spinner"></div>
@@ -592,11 +564,11 @@
 
                 // Define your phone number patterns
                 const phoneNumberPatterns = {
-                  '+880': {
+                  '880': {
                     pattern: /^[0-9]{3,}$/,
                     minLength: 10,
                     maxLength: 11
-                  },
+                  }, // Bangladesh
                 };
 
                 // Get references to your input elements
@@ -884,6 +856,24 @@
                 // Initial check when the page loads
                 updateJoinNowButtonState();
 
+
+                $(document).ready(function() {
+                  $("#uploadForm").on('submit', function(e) {
+                    e.preventDefault();
+                    var formData = new FormData(this);
+                    $.ajax({
+                      type: 'POST',
+                      url: 'upload.php',
+                      data: formData,
+                      processData: false,
+                      contentType: false,
+                      success: function(response) {
+                        $("#profpic-message").html(response);
+                      }
+                    });
+                  });
+                });
+
                 const uploadImage = document.getElementById('uploadImage');
                 const preview = document.getElementById('preview');
                 const profilePicPreview = document.querySelector('#profilePicPreview');
@@ -923,59 +913,58 @@
               <h2>Sign In</h2>
               <h3>Enter your credentials</h3>
               <form class="login-form">
-                <div class="email">
-                  <input autocomplete="off" spellcheck="false" class="control" type="email" name="emailUser" placeholder="Email"/>
-                  <div id="spinner" class="spinner"></div>
-                </div>
-                <input spellcheck="false" class="control" id="password-1" type="password" name="passwordUser" placeholder="Password" onkeyup="handleChange()" />
-                <div id="bars-1">
-                  <div></div>
-                </div>
-                <button class="btn signin-btn" id="signin-btn">
-                  <p>Login</p>
-                </button>
-                <h5>Do not have an account?<b onclick="toggle()" class="pointer">Sign up here</b></h5>
-              </form>
+                <input autocomplete="off" spellcheck="false" class="control" type="email" name="emailUser" placeholder="Email" />
+                <div id="spinner" class="spinner"></div>
             </div>
+            <input spellcheck="false" class="control" id="password-1" type="password" name="passwordUser" placeholder="Password" onkeyup="handleChange()" />
+            <div id="bars-1">
+              <div></div>
+            </div>
+            <button class="btn signin-btn" id="signin-btn">
+              <p>Login</p>
+            </button>
+            <h5>Do not have an account?<b onclick="toggle()" class="pointer">Sign up here</b></h5>
+            </form>
           </div>
         </div>
-        <div class="form-wrapper">
-
-        </div>
       </div>
-      <!-- END SIGN IN -->
+      <div class="form-wrapper">
+
+      </div>
     </div>
-    <!-- END FORM SECTION -->
-    <!-- CONTENT SECTION -->
-    <div class="row content-row">
-      <!-- SIGN IN CONTENT -->
-      <div class="col align-items-center flex-col">
-        <div class="text sign-in">
-          <h2>
-            Welcome
-          </h2>
+    <!-- END SIGN IN -->
+  </div>
+  <!-- END FORM SECTION -->
+  <!-- CONTENT SECTION -->
+  <div class="row content-row">
+    <!-- SIGN IN CONTENT -->
+    <div class="col align-items-center flex-col">
+      <div class="text sign-in">
+        <h2>
+          Welcome
+        </h2>
 
-        </div>
-        <div class="img sign-in">
-
-        </div>
       </div>
-      <!-- END SIGN IN CONTENT -->
-      <!-- SIGN UP CONTENT -->
-      <div class="col align-items-center flex-col">
-        <div class="img sign-up">
+      <div class="img sign-in">
 
-        </div>
-        <div class="text sign-up">
-          <h2>
-            Join with us
-          </h2>
-
-        </div>
       </div>
-      <!-- END SIGN UP CONTENT -->
     </div>
-    <!-- END CONTENT SECTION -->
+    <!-- END SIGN IN CONTENT -->
+    <!-- SIGN UP CONTENT -->
+    <div class="col align-items-center flex-col">
+      <div class="img sign-up">
+
+      </div>
+      <div class="text sign-up">
+        <h2>
+          Join with us
+        </h2>
+
+      </div>
+    </div>
+    <!-- END SIGN UP CONTENT -->
+  </div>
+  <!-- END CONTENT SECTION -->
   </div>
   <!-- ==================================================================================== -->
 
