@@ -1,6 +1,3 @@
-
-
-
 * {
   margin: 0;
   padding: 0;
@@ -206,7 +203,8 @@ button {
   transition: 0.2s all;
 }
 
-.login-card img, .profpic > .img{
+.login-card img,
+.profpic>.img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -330,6 +328,25 @@ button {
 }
 
 #bars div {
+  height: 6px;
+  border-radius: 3px;
+  transition: 0.4s;
+  width: 0%;
+}
+
+#bars-1 {
+  margin: 8px 0;
+  margin-bottom: 30px;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#bars-1 div {
   height: 6px;
   border-radius: 3px;
   transition: 0.4s;
@@ -1752,7 +1769,8 @@ table tr td {
     position: absolute;
     padding-top: 1rem;
     padding-bottom: 5rem;
-    background-color: var(--base-100);;
+    background-color: var(--base-100);
+    ;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     transform: translateY(100%);
@@ -1764,7 +1782,8 @@ table tr td {
     position: absolute;
     padding-top: 1rem;
     padding-bottom: 10rem;
-    background-color: var(--base-100);;
+    background-color: var(--base-100);
+    ;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     transform: translateY(100%);
@@ -1882,7 +1901,8 @@ table tr td {
     position: absolute;
     padding-top: 1rem;
     padding-bottom: 3rem;
-    background-color: var(--base-100);;
+    background-color: var(--base-100);
+    ;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     transform: translateY(100%);
@@ -1894,7 +1914,8 @@ table tr td {
     position: absolute;
     padding-top: 1rem;
     padding-bottom: 10rem;
-    background-color: var(--base-100);;
+    background-color: var(--base-100);
+    ;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     transform: translateY(100%);

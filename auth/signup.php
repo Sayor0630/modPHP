@@ -920,9 +920,11 @@
                 <div id="bars-1">
                   <div></div>
                 </div>
+                <div class="login-btn">
                 <button class="btn signin-btn" id="signin-btn">
                   <p>Login</p>
                 </button>
+                </div>
                 <h5>Do not have an account?<b onclick="toggle()" class="pointer">Sign up here</b></h5>
               </form>
             </div>
