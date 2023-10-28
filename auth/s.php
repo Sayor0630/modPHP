@@ -48,7 +48,9 @@ if (isset($_FILES['image'])) {
     }
 }
 
+
 $conn->close();
+}
 ?>
 
 

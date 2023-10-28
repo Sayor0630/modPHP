@@ -431,10 +431,10 @@
                       <div class="password-toggle show" onclick="togglePassword('password')"></div>
                     </div>
 
-                    <div class="password-container">
+                    <!-- <div class="password-container">
                       <input spellcheck="false" class="control" id="confirm-password" type="password" placeholder="Confirm Password" name="confirm_passwordUser" />
                       <div class="password-toggle show" onclick="togglePassword('confirm-password')"></div>
-                    </div>
+                    </div> -->
 
                     <div class="field btns">
                       <button class="prev-2 prev">Previous</button>
@@ -596,18 +596,7 @@
                     pattern: /^[0-9]{3,}$/,
                     minLength: 10,
                     maxLength: 11
-                  }, // Bangladesh
-                  '+1': {
-                    pattern: /^[0-9]{3,}$/,
-                    minLength: 10,
-                    maxLength: 10
-                  }, // USA
-                  '+44': {
-                    pattern: /^[0-9]{5,}$/,
-                    minLength: 10,
-                    maxLength: 11
-                  }, // UK
-                  // Add more country patterns here
+                  },
                 };
 
                 // Get references to your input elements
@@ -935,10 +924,10 @@
               <h3>Enter your credentials</h3>
               <form class="login-form">
                 <div class="email">
-                  <input autocomplete="off" spellcheck="false" class="control" type="email" name="email" placeholder="Email or Phone Number" name="credentials" />
+                  <input autocomplete="off" spellcheck="false" class="control" type="email" name="emailUser" placeholder="Email"/>
                   <div id="spinner" class="spinner"></div>
                 </div>
-                <input spellcheck="false" class="control" id="password-1" type="password" name="password" placeholder="Password" onkeyup="handleChange()" />
+                <input spellcheck="false" class="control" id="password-1" type="password" name="passwordUser" placeholder="Password" onkeyup="handleChange()" />
                 <div id="bars-1">
                   <div></div>
                 </div>
