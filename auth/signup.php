@@ -102,7 +102,7 @@
                     <div class="mobile-number">
                       <div class="phone-input">
                         <select name="countryCodeUser" id="countryCode" class="control countryCode" disabled>
-                          <option value="880">+880 (BD)</option>
+                          <option value="+880">+880 (BD)</option>
                         </select>
                         <input autocomplete="off" spellcheck="false" class="control mobileNumber" type="tel" id="mobile_number" name="mobile_numberUser" placeholder="Mobile Number" />
                       </div>
@@ -564,7 +564,7 @@
 
                 // Define your phone number patterns
                 const phoneNumberPatterns = {
-                  '880': {
+                  '+880': {
                     pattern: /^[0-9]{3,}$/,
                     minLength: 10,
                     maxLength: 11
@@ -915,16 +915,16 @@
               <form class="login-form">
                 <input autocomplete="off" spellcheck="false" class="control" type="email" name="emailUser" placeholder="Email" />
                 <div id="spinner" class="spinner"></div>
+                <input spellcheck="false" class="control" id="password-1" type="password" name="passwordUser" placeholder="Password" onkeyup="handleChange()" />
+                <div id="bars-1">
+                  <div></div>
+                </div>
+                <button class="btn signin-btn" id="signin-btn">
+                  <p>Login</p>
+                </button>
+                <h5>Do not have an account?<b onclick="toggle()" class="pointer">Sign up here</b></h5>
+              </form>
             </div>
-            <input spellcheck="false" class="control" id="password-1" type="password" name="passwordUser" placeholder="Password" onkeyup="handleChange()" />
-            <div id="bars-1">
-              <div></div>
-            </div>
-            <button class="btn signin-btn" id="signin-btn">
-              <p>Login</p>
-            </button>
-            <h5>Do not have an account?<b onclick="toggle()" class="pointer">Sign up here</b></h5>
-            </form>
           </div>
         </div>
       </div>
