@@ -104,7 +104,7 @@
                         <select name="countryCodeUser" id="countryCode" class="control countryCode" disabled>
                           <option value="+880">+880 (BD)</option>
                         </select>
-                        <input autocomplete="off" spellcheck="false" class="control mobileNumber" type="tel" id="mobile_number" name="mobile_numberUser" placeholder="Mobile Number" />
+                        <input autocomplete="off" spellcheck="false" class="control mobileNumber" type="tel" id="mobile_number" name="mobile_number" placeholder="Mobile Number" />
                       </div>
                       <div id='mobile-number-message' class="alert-message"></div>
                     </div>
@@ -121,7 +121,7 @@
                     </div>
                     <div class="gender">
                       <div class="gender-input">
-                        <select name="genderUser" id="gender" class="control gender">
+                        <select name="gender" id="gender" class="control gender">
                           <option value="">Select Gender</option>
                           <option value="male">Male</option>
                           <option value="female">Female</option>
@@ -856,6 +856,10 @@
                 // Initial check when the page loads
                 updateJoinNowButtonState();
 
+                const uploadImage = document.getElementById('uploadImage');
+                const preview = document.getElementById('preview');
+                const profilePicPreview = document.querySelector('#profilePicPreview');
+                const profilePicPreview1 = document.querySelector('#profilePicPreview1');
 
                 $(document).ready(function() {
                   $("#uploadForm").on('submit', function(e) {
@@ -873,11 +877,6 @@
                     });
                   });
                 });
-
-                const uploadImage = document.getElementById('uploadImage');
-                const preview = document.getElementById('preview');
-                const profilePicPreview = document.querySelector('#profilePicPreview');
-                const profilePicPreview1 = document.querySelector('#profilePicPreview1');
 
                 uploadImage.addEventListener('change', (event) => {
                   const file = event.target.files[0];
@@ -913,9 +912,11 @@
               <h2>Sign In</h2>
               <h3>Enter your credentials</h3>
               <form class="login-form">
-                <input autocomplete="off" spellcheck="false" class="control" type="email" name="emailUser" placeholder="Email" />
-                <div id="spinner" class="spinner"></div>
-                <input spellcheck="false" class="control" id="password-1" type="password" name="passwordUser" placeholder="Password" onkeyup="handleChange()" />
+                <div class="email">
+                  <input autocomplete="off" spellcheck="false" class="control" type="email" name="email" placeholder="Email or Phone Number" name="credentials" />
+                  <div id="spinner" class="spinner"></div>
+                </div>
+                <input spellcheck="false" class="control" id="password-1" type="password" name="password" placeholder="Password" onkeyup="handleChange()" />
                 <div id="bars-1">
                   <div></div>
                 </div>
@@ -927,44 +928,43 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="form-wrapper">
+        <div class="form-wrapper">
 
+        </div>
       </div>
+      <!-- END SIGN IN -->
     </div>
-    <!-- END SIGN IN -->
-  </div>
-  <!-- END FORM SECTION -->
-  <!-- CONTENT SECTION -->
-  <div class="row content-row">
-    <!-- SIGN IN CONTENT -->
-    <div class="col align-items-center flex-col">
-      <div class="text sign-in">
-        <h2>
-          Welcome
-        </h2>
+    <!-- END FORM SECTION -->
+    <!-- CONTENT SECTION -->
+    <div class="row content-row">
+      <!-- SIGN IN CONTENT -->
+      <div class="col align-items-center flex-col">
+        <div class="text sign-in">
+          <h2>
+            Welcome
+          </h2>
 
-      </div>
-      <div class="img sign-in">
+        </div>
+        <div class="img sign-in">
 
+        </div>
       </div>
+      <!-- END SIGN IN CONTENT -->
+      <!-- SIGN UP CONTENT -->
+      <div class="col align-items-center flex-col">
+        <div class="img sign-up">
+
+        </div>
+        <div class="text sign-up">
+          <h2>
+            Join with us
+          </h2>
+
+        </div>
+      </div>
+      <!-- END SIGN UP CONTENT -->
     </div>
-    <!-- END SIGN IN CONTENT -->
-    <!-- SIGN UP CONTENT -->
-    <div class="col align-items-center flex-col">
-      <div class="img sign-up">
-
-      </div>
-      <div class="text sign-up">
-        <h2>
-          Join with us
-        </h2>
-
-      </div>
-    </div>
-    <!-- END SIGN UP CONTENT -->
-  </div>
-  <!-- END CONTENT SECTION -->
+    <!-- END CONTENT SECTION -->
   </div>
   <!-- ==================================================================================== -->
 
