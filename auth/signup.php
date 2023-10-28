@@ -78,7 +78,7 @@
               </div>
 
               <div class="form-outer">
-                <form class="login-form" enctype="multipart/form-data">
+                <form action="register_process.php" class="login-form" method="post" enctype="multipart/form-data">
                   <div class="page slide-page">
                     <div class="title">
                       Give your Basic Info:
@@ -130,7 +130,7 @@
                     <div class="mobile-number">
                       <div class="phone-input">
                         <select name="countryCodeUser" id="countryCode" class="control countryCode" disabled>
-                          <option value="+880">+880 (BD)</option>
+                          <option value="880">+880 (BD)</option>
                         </select>
                         <input autocomplete="off" spellcheck="false" class="control mobileNumber" type="tel" id="mobile_number" name="mobile_numberUser" placeholder="Mobile Number" />
                       </div>
@@ -431,10 +431,10 @@
                       <div class="password-toggle show" onclick="togglePassword('password')"></div>
                     </div>
 
-                    <!-- <div class="password-container">
+                    <div class="password-container">
                       <input spellcheck="false" class="control" id="confirm-password" type="password" placeholder="Confirm Password" name="confirm_passwordUser" />
                       <div class="password-toggle show" onclick="togglePassword('confirm-password')"></div>
-                    </div> -->
+                    </div>
 
                     <div class="field btns">
                       <button class="prev-2 prev">Previous</button>
@@ -518,7 +518,7 @@
                     <div class="field btns">
                       <button class="prev-3 prev">Previous</button>
                     </div>
-                    <button class="btn signup-btn" id="signup-btn">
+                    <button class="btn signup-btn" id="signup-btn" name="signup-btn">
                       <p>JOIN NOW</p>
                     </button>
                   </div>
