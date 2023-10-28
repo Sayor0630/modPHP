@@ -78,21 +78,56 @@
               </div>
 
               <div class="form-outer">
-                <form class="login-form">
+                <form class="login-form" enctype="multipart/form-data">
                   <div class="page slide-page">
                     <div class="title">
                       Give your Basic Info:
                     </div>
                     <div class="profpic" id="profpic">
                       <label for="uploadImage">
+<<<<<<< Updated upstream
                         <img id="preview" src="https://i.pinimg.com/originals/0a/5f/ea/0a5feae400fc816c4ca2aca8bd67a168.jpg" alt="" style="max-width: 300px; max-height: 300px; cursor: pointer;">
+=======
+<<<<<<< HEAD
+                          <img id="preview" src="" alt="Image Preview" style="max-width: 300px; max-height: 300px; cursor: pointer;">
+=======
+                        <img id="preview" src="https://i.pinimg.com/originals/0a/5f/ea/0a5feae400fc816c4ca2aca8bd67a168.jpg" alt="" style="max-width: 300px; max-height: 300px; cursor: pointer;">
+>>>>>>> 48476b42549848322022a2d06070c11a082847a8
+>>>>>>> Stashed changes
                       </label>
                       <!-- The label will trigger the file input when clicked -->
                       <input type="file" name="image" accept="image/*" id="uploadImage" style="display: none;">
                       <input type="submit" value="Upload" style="display: none;">
                       <p>Select your Profile Picture</p>
                       <div id='profpic-message' class="alert-message"></div>
-                    </div>
+                  </div>
+
+
+
+                  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#uploadForm").on('submit', function (e) {
+                e.preventDefault();
+                var formData = new FormData(this);
+                $.ajax({
+                    type: 'POST',
+                    url: 'upload.php',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function (response) {
+                        $("#profpic-message").html(response);
+                    }
+                });
+            });
+        });
+    </script>
+
+
+
+
+
                     <div class="username">
                       <input autocomplete="off" spellcheck="false" class="control" type="text" id="name" name="name" placeholder="Username" />
                       <div id="spinner" class="spinner"></div>
