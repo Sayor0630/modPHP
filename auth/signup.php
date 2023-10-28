@@ -584,7 +584,7 @@
 
                   return (
                     nameInput.value.length >= 3 &&
-                    nameInput.value.length <= 15 &&
+                    nameInput.value.length <= 10 &&
                     validPattern.test(nameInput.value)
                   );
                 }
