@@ -104,7 +104,7 @@
                         <select name="countryCodeUser" id="countryCode" class="control countryCode" disabled>
                           <option value="+880">+880 (BD)</option>
                         </select>
-                        <input autocomplete="off" spellcheck="false" class="control mobileNumber" type="tel" id="mobile_number" name="mobile_number" placeholder="Mobile Number" />
+                        <input autocomplete="off" spellcheck="false" class="control mobileNumber" type="tel" id="mobile_number" name="mobile_numberUser" placeholder="Mobile Number" />
                       </div>
                       <div id='mobile-number-message' class="alert-message"></div>
                     </div>
@@ -121,7 +121,7 @@
                     </div>
                     <div class="gender">
                       <div class="gender-input">
-                        <select name="gender" id="gender" class="control gender">
+                        <select name="genderUser" id="gender" class="control gender">
                           <option value="">Select Gender</option>
                           <option value="male">Male</option>
                           <option value="female">Female</option>
