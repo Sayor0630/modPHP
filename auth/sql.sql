@@ -5,8 +5,6 @@ CREATE TABLE user_profile (
 
   fullNameUser VARCHAR(255) NOT NULL UNIQUE,
 
-  countryCodeUser ENUM('880'),
-
   mobile_numberUser VARCHAR(255) NOT NULL UNIQUE,
   
   genderUser ENUM('male', 'female'),

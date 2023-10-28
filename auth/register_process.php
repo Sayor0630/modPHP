@@ -24,8 +24,7 @@ if (isset($_POST["signup-btn"])) { // Check if the registration button was click
 
     // Get user input
     $fullName = $_POST["fullNameUser"];
-    $countryCode = $_POST["countryCodeUser"];
-    $mobileNumber = $_POST["mobile_numberUser"];
+    $mobileNumber = '+880' . $_POST["mobile_numberUser"];
     $gender = $_POST["genderUser"];
     $grade = $_POST["gradeUser"];
     $religion = $_POST["religionUser"];
@@ -35,10 +34,20 @@ if (isset($_POST["signup-btn"])) { // Check if the registration button was click
 
 
     // Insert data into the database
-    $sql = "INSERT INTO user_profile (fullNameUser, countryCodeUser, mobile_numberUser, genderUser, gradeUser, religionUser, districtUser, emailUser, passwordUser, profile_image) VALUES ('$fullName', '$countryCode', '$mobileNumber', '$gender', '$grade', '$religion', '$district', '$email', '$password', '$imagePath')";
+    $sql = "INSERT INTO user_profile (fullNameUser, mobile_numberUser, genderUser, gradeUser, religionUser, districtUser, emailUser, passwordUser, profile_image) VALUES ('$fullName', '$mobileNumber', '$gender', '$grade', '$religion', '$district', '$email', '$password', '$imagePath')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Registration successful!";
+
+
+        // Store user information in sessions
+        session_start();
+        $_SESSION['fullNameUser'] = $fullName;
+        $_SESSION['emailUser'] = $email;
+
+
+        header('Location: h.php');
+
+        exit;
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
