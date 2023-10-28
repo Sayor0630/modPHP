@@ -85,18 +85,12 @@
                     </div>
                     <div class="profpic" id="profpic">
                       <label for="uploadImage">
-<<<<<<< Updated upstream
+
                         <img id="preview" src="https://i.pinimg.com/originals/0a/5f/ea/0a5feae400fc816c4ca2aca8bd67a168.jpg" alt="" style="max-width: 300px; max-height: 300px; cursor: pointer;">
-=======
-<<<<<<< HEAD
-                          <img id="preview" src="" alt="Image Preview" style="max-width: 300px; max-height: 300px; cursor: pointer;">
-=======
-                        <img id="preview" src="https://i.pinimg.com/originals/0a/5f/ea/0a5feae400fc816c4ca2aca8bd67a168.jpg" alt="" style="max-width: 300px; max-height: 300px; cursor: pointer;">
->>>>>>> 48476b42549848322022a2d06070c11a082847a8
->>>>>>> Stashed changes
+
                       </label>
                       <!-- The label will trigger the file input when clicked -->
-                      <input type="file" name="image" accept="image/*" id="uploadImage" style="display: none;">
+                      <input type="file" name="imageUser" accept="image/*" id="uploadImage" style="display: none;">
                       <input type="submit" value="Upload" style="display: none;">
                       <p>Select your Profile Picture</p>
                       <div id='profpic-message' class="alert-message"></div>
@@ -129,16 +123,16 @@
 
 
                     <div class="username">
-                      <input autocomplete="off" spellcheck="false" class="control" type="text" id="name" name="name" placeholder="Username" />
+                      <input autocomplete="off" spellcheck="false" class="control" type="text" id="name" name="fullNameUser" placeholder="Username" />
                       <div id="spinner" class="spinner"></div>
                       <div id='name-message' class="alert-message"></div>
                     </div>
                     <div class="mobile-number">
                       <div class="phone-input">
-                        <select name="countryCode" id="countryCode" class="control countryCode" disabled>
+                        <select name="countryCodeUser" id="countryCode" class="control countryCode" disabled>
                           <option value="+880">+880 (BD)</option>
                         </select>
-                        <input autocomplete="off" spellcheck="false" class="control mobileNumber" type="tel" id="mobile_number" name="mobile_number" placeholder="Mobile Number" />
+                        <input autocomplete="off" spellcheck="false" class="control mobileNumber" type="tel" id="mobile_number" name="mobile_numberUser" placeholder="Mobile Number" />
                       </div>
                       <div id='mobile-number-message' class="alert-message"></div>
                     </div>
@@ -155,7 +149,7 @@
                     </div>
                     <div class="gender">
                       <div class="gender-input">
-                        <select name="gender" id="gender" class="control gender">
+                        <select name="genderUser" id="gender" class="control gender">
                           <option value="">Select Gender</option>
                           <option value="male">Male</option>
                           <option value="female">Female</option>
@@ -165,24 +159,19 @@
                     </div>
                     <div class="grade">
                       <div class="grade-input">
-                        <select name="grade" id="grade" class="control grade">
+                        <select name="gradeUser" id="grade" class="control grade">
                           <option value="">Select Grade or Level</option>
-                          <option value="eight">Eight</option>
-                          <option value="nine">Nine</option>
-                          <option value="ten">Ten</option>
                           <option value="eleven">Eleven</option>
                           <option value="twelve">twelve</option>
-                          <option value="mt">Model Test</option>
+                          <option value="modelTest">Model Test</option>
                           <option value="admission">Admission</option>
-                          <option value="ud">Under Graduate</option>
-                          <option value="graduate">Graduate</option>
                         </select>
                       </div>
                       <div id='grade-message' class="alert-message"></div>
                     </div>
                     <div class="religion">
                       <div class="religion-input">
-                        <select name="religion" id="religion" class="control religion">
+                        <select name="religionUser" id="religion" class="control religion">
                           <option value="">Select Religion</option>
                           <option value="islam">Islam</option>
                           <option value="hinduism">Hinduism</option>
@@ -195,7 +184,7 @@
                     </div>
                     <div class="district">
                       <div class="district-input">
-                        <select name="district" id="district" class="control district">
+                        <select name="districtUser" id="district" class="control district">
                           <option value="">Select District</option>
                           <option value="bagerhat">Bagerhat</option>
                           <option value="bandarban">Bandarban</option>
@@ -266,7 +255,7 @@
                       <div id='district-message' class="alert-message"></div>
                     </div>
                     <div class="email">
-                      <input autocomplete="off" spellcheck="false" class="control" type="email" id="email" name="email" placeholder="Email" />
+                      <input autocomplete="off" spellcheck="false" class="control" type="email" id="email" name="emailUser" placeholder="Email" />
                       <div id="spinner" class="spinner"></div>
                       <div id='email-message' class="alert-message "></div>
                       <div id='email-message-1' class="alert-message "></div>
@@ -438,12 +427,12 @@
                     <div id='pass-length-message' class="alert-message"></div>
                     <div id='pass-match-message' class="alert-message"></div>
                     <div class="password-container">
-                      <input spellcheck="false" class="control" id="password" name="password" type="password" placeholder="Password" />
+                      <input spellcheck="false" class="control" id="password" name="passwordUser" type="password" placeholder="Password" />
                       <div class="password-toggle show" onclick="togglePassword('password')"></div>
                     </div>
 
                     <div class="password-container">
-                      <input spellcheck="false" class="control" id="confirm-password" type="password" placeholder="Confirm Password" name="confirm_password" />
+                      <input spellcheck="false" class="control" id="confirm-password" type="password" placeholder="Confirm Password" name="confirm_passwordUser" />
                       <div class="password-toggle show" onclick="togglePassword('confirm-password')"></div>
                     </div>
 
